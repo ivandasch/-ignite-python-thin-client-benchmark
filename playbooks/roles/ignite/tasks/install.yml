@@ -1,0 +1,78 @@
+---
+- name: adding ignite group
+  become: yes
+  group:
+    name: ignite
+    state: present
+
+- name: adding ignite user
+  become: yes
+  user:
+    name: ignite
+    group: ignite
+    home: '{{ ignite_home }}'
+
+- name: Check if {{ ignite_lzip }} exists
+  stat:
+    path: '{{ ignite_lzip }}'
+  register: ignite_lzip_stat_result
+
+- name: downloading {{ ignite_url }}
+  become: yes
+  become_user: ignite
+  when: not ignite_lzip_stat_result.stat.exists
+  get_url:
+    url: '{{ ignite_url }}'
+    dest: '{{ ignite_lzip }}'
+    mode: 0644
+
+- name: unarchiving {{ ignite_lzip }}
+  
+  become: yes
+  become_user: ignite
+  unarchive:
+    remote_src: yes
+    src: '{{ ignite_lzip }}'
+    dest: '{{ ignite_home }}'
+    creates: '{{ ignite_install_dir }}'
+
+- name: move optional log4j2
+  become: yes
+  become_user: ignite
+  with_items:
+    - libdir: '{{ ignite_install_dir }}/libs'
+  command: cp -r {{ item.libdir }}/optional/ignite-log4j2 {{ item.libdir }}
+
+- name: install config
+  become: yes
+  become_user: ignite
+  with_items:
+    - config: ignite-configuration.xml
+      dest_config: default-config.xml
+      d: '{{ ignite_install_dir }}/config'
+  template:
+    src: '{{ item.config }}.j2'
+    dest: '{{ item.d }}/{{ item.dest_config }}'
+    mode: '{{ item.m|default("0644") }}'
+
+- name: install log4j2 config
+  become: yes
+  become_user: ignite
+  with_items:
+    - config: ignite-log4j2.xml
+      d: '{{ ignite_install_dir }}/config'
+  template:
+    src: '{{ item.config }}.j2'
+    dest: '{{ item.d }}/{{ item.config }}'
+    mode: '{{ item.m|default("0644") }}'
+
+- name: install ignite.service
+  become: yes
+  with_items:
+    - f: ignite.service
+      d: /etc/systemd/system
+  template:
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m | default("0644") }}'
+  register: ignite_service_installed

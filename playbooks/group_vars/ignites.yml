@@ -1,0 +1,5 @@
+---
+jvm_opts: '-Xms8G -Xmx8G -XX:+UseG1GC'
+data_region:
+  initial_size: '{{ 18 * 1024 * 1024 * 1024 }}'
+  max_size: '{{ 18 * 1024 * 1024 * 1024 }}'

@@ -1,0 +1,32 @@
+---
+- include_tasks: install.yml
+
+- name: systemctl daemon-reload
+  become: yes
+  when: ignite_service_installed is changed
+  systemd:
+    daemon_reload: yes
+
+- name: start ignite
+  tags: start
+  become: yes
+  service:
+    name: ignite
+    enabled: yes
+    state: started
+
+- name: stop ignite
+  tags: stop
+  become: yes
+  service:
+    name: ignite
+    enabled: yes
+    state: stopped
+
+- name: restart ignite
+  tags: restart
+  become: yes
+  service:
+    name: ignite
+    enabled: yes
+    state: restarted

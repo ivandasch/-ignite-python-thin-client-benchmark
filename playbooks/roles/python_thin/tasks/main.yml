@@ -1,0 +1,28 @@
+---
+- name: make work directory
+  file:
+    path: '{{ work_dir }}'
+    state: directory
+    mode: '0755'
+
+- name: copy test files
+  copy:
+    src: "../../../"
+    dest: "{{ work_dir }}"
+
+- name: create virtual env
+  pip:
+    requirements: '{{work_dir}}/requirements.txt'
+    virtualenv: '{{ venv_dir }}'
+    virtualenv_command: /usr/bin/python3.8 -m venv
+
+- name: set pytest.ini
+  with_items:
+    - config: pytest.ini
+      d: '{{ work_dir }}'
+  template:
+    src: '{{ item.config }}.j2'
+    dest: '{{ item.d }}/{{ item.config }}'
+    mode: '{{ item.m|default("0644") }}'
+
+

@@ -1,0 +1,7 @@
+---
+ignite_home: /opt/ignite
+ignite_name: apache-ignite-{{ ignite_ver }}-bin
+ignite_zip: '{{ ignite_name }}.zip'
+ignite_lzip: '{{ ignite_home }}/{{ ignite_zip }}'
+ignite_url: '{{ ignite_mirror }}/{{ ignite_ver }}/{{ ignite_zip }}'
+ignite_install_dir: '{{ ignite_home }}/{{ ignite_name }}'

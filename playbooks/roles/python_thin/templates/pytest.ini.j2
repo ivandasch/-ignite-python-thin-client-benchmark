@@ -1,0 +1,5 @@
+[pytest]
+testpaths = benchmark
+python_files = *.py
+python_functions = benchmark_*
+ignite_connection = {{ groups['ignites'] | map('extract', hostvars, 'ansible_default_ipv4') | map(attribute='address') | map('regex_replace', '$', ":{}".format(thin_client_port)) | join(',') }}

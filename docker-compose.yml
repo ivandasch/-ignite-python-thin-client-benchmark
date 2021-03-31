@@ -1,0 +1,21 @@
+services:
+  ignite_0:
+    image: apacheignite/ignite:latest
+    ports:
+      - 10800:10800
+    restart: always
+    network_mode: host
+
+  ignite_1:
+    image: apacheignite/ignite:latest
+    ports:
+      - 10800:10801
+    restart: always
+    network_mode: host
+
+  ignite_2:
+    image: apacheignite/ignite:latest
+    ports:
+      - 10800:10802
+    restart: always
+    network_mode: host

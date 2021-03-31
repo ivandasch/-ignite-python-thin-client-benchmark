@@ -1,0 +1,6 @@
+git+https://github.com/apache/ignite-python-thin-client#egg=pyignite
+appmetrics
+uvloop
+pytest
+pytest-benchmark
+pytest-asyncio

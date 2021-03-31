@@ -1,0 +1,21 @@
+---
+
+- name: add specified repository into sources list
+  become: true
+  ansible.builtin.apt_repository:
+    repo: 'ppa:deadsnakes/ppa'
+
+- name: install packages
+  become: true
+  apt:
+    state: latest
+    update_cache: yes
+    pkg:
+      - build-essential
+      - unzip
+      - openjdk-8-jdk
+      - python3.8
+      - python3-venv
+      - python3.8-venv
+      - python3.8-dev
+
