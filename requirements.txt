@@ -1,4 +1,6 @@
-git+https://github.com/apache/ignite-python-thin-client#egg=pyignite
+#git+https://github.com/apache/ignite-python-thin-client#egg=pyignite
+pyignite==0.3.4
+attrs==20.3.0
 appmetrics
 uvloop
 pytest
