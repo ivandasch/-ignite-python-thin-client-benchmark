@@ -5,11 +5,17 @@ from collections import OrderedDict
 
 import pytest
 from pyignite import GenericObjectMeta
-from pyignite.aio_cache import AioCache
+
+try:
+    from pyignite.aio_cache import AioCache
+except ImportError:
+    AioCache = None
+
 from pyignite.datatypes import IntObject, ByteArrayObject
 
 data_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024]
 coro_batches = [5, 10, 20]
+
 
 class Data(
     metaclass=GenericObjectMeta,
@@ -43,6 +49,7 @@ async def aio_cache(request, aio_client):
     await cache.destroy()
 
 
+@pytest.mark.async_bench
 @pytest.mark.parametrize('size', data_sizes)
 @pytest.mark.benchmark
 @pytest.mark.benchmark(group='binary_object_put')
@@ -55,6 +62,7 @@ def benchmark_async_binary_put(benchmark, event_loop, aio_cache, size):
     benchmark.pedantic(execute, args=(event_loop, put), rounds=10, iterations=100, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.parametrize('size', data_sizes)
 @pytest.mark.parametrize('batch', coro_batches)
 @pytest.mark.benchmark(group='binary_object_put')
@@ -112,6 +120,7 @@ def benchmark_sync_binary_get(benchmark, cache, size):
     benchmark.pedantic(get, rounds=10, iterations=100, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.parametrize('size', data_sizes)
 @pytest.mark.benchmark(group='binary_object_get')
 def benchmark_async_binary_get(benchmark, event_loop, aio_cache, size):
@@ -125,6 +134,7 @@ def benchmark_async_binary_get(benchmark, event_loop, aio_cache, size):
     benchmark.pedantic(execute, args=(event_loop, get), rounds=10, iterations=100, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.parametrize('size', data_sizes)
 @pytest.mark.parametrize('batch', coro_batches)
 @pytest.mark.benchmark(group='binary_object_get')
