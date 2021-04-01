@@ -83,5 +83,20 @@ def client(request, ignite_hosts):
         client.close()
 
 
+@pytest.fixture()
+def cache(request, client):
+    cache = client.get_or_create_cache(request.node.name)
+    yield cache
+    cache.destroy()
+
+
+@pytest.fixture()
+async def aio_cache(request, aio_client):
+    cache = await aio_client.get_or_create_cache(request.node.name)
+    yield cache
+    await cache.destroy()
+
+
+
 def pytest_addoption(parser):
     parser.addini("ignite_connection", default="127.0.0.1:10800", help="ignite connection string")
