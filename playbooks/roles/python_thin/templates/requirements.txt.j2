@@ -1,0 +1,17 @@
+{% if thin_client.version.commit is defined  %}
+{% with commit = thin_client.version.commit %}
+{% if commit == 'latest' %}
+git+https://github.com/apache/ignite-python-thin-client#egg=pyignite
+{% else %}
+git+https://github.com/apache/ignite-python-thin-client@{{ commit }}#egg=pyignite
+{% endif %}
+{% endwith %}
+{% else %}
+pyignite=={{ thin_client.version }}
+{% endif %}
+attrs==20.3.0
+appmetrics
+uvloop
+pytest
+pytest-benchmark
+pytest-asyncio

@@ -1,4 +1,9 @@
 ---
+- name: clean work directory
+  file:
+    path: '{{ work_dir }}'
+    state: absent
+
 - name: make work directory
   file:
     path: '{{ work_dir }}'
@@ -7,13 +12,26 @@
 
 - name: copy test files
   copy:
-    src: "../../../"
-    dest: "{{ work_dir }}"
+    src: '../../../{{ item.src }}'
+    dest: '{{ work_dir }}'
+  with_items:
+    - { src: 'benchmark' }
+    - { src: 'conftest.py' }
+
+- name: set requirements.txt
+  with_items:
+    - config: requirements.txt
+      d: '{{ work_dir }}'
+  template:
+    src: '{{ item.config }}.j2'
+    dest: '{{ item.d }}/{{ item.config }}'
+    mode: '{{ item.m|default("0644") }}'
 
 - name: create virtual env
   pip:
     requirements: '{{work_dir}}/requirements.txt'
     virtualenv: '{{ venv_dir }}'
+    state: forcereinstall
     virtualenv_command: /usr/bin/python3.8 -m venv
 
 - name: set pytest.ini

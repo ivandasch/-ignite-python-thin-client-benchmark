@@ -9,7 +9,7 @@ from benchmark.utils import execute
 try:
     from pyignite.aio_cache import AioCache
 except ImportError:
-    AioCache = None
+    AioCache = type('AioCache', (object,), {})
 
 coro_batches = [5, 10, 20]
 
@@ -23,6 +23,7 @@ def benchmark_sync_long_put(benchmark, cache):
     benchmark.pedantic(put, rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='long_put')
 def benchmark_async_long_put(benchmark, event_loop, aio_cache):
     async def put():
@@ -32,6 +33,7 @@ def benchmark_async_long_put(benchmark, event_loop, aio_cache):
     benchmark.pedantic(execute, args=(event_loop, put), rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='long_put')
 @pytest.mark.parametrize('batch', coro_batches)
 def benchmark_async_long_put_batch(benchmark, event_loop, aio_cache, batch):
@@ -68,6 +70,7 @@ def benchmark_sync_long_get(benchmark, cache):
     benchmark.pedantic(get, rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='long_get')
 def benchmark_async_long_get(benchmark, event_loop, aio_cache):
     event_loop.run_until_complete(load_long(aio_cache, 1025))
@@ -80,6 +83,7 @@ def benchmark_async_long_get(benchmark, event_loop, aio_cache):
     benchmark.pedantic(execute, args=(event_loop, get), rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='long_get')
 @pytest.mark.parametrize('batch', coro_batches)
 def benchmark_async_long_get_batched(benchmark, event_loop, aio_cache, batch):
@@ -120,6 +124,7 @@ def benchmark_sync_string_put(benchmark, cache, size):
     benchmark.pedantic(put, rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='string_put')
 @pytest.mark.parametrize('size', string_sizes)
 def benchmark_async_string_put(benchmark, event_loop, aio_cache, size):
@@ -131,6 +136,7 @@ def benchmark_async_string_put(benchmark, event_loop, aio_cache, size):
     benchmark.pedantic(execute, args=(event_loop, put), rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='string_put')
 @pytest.mark.parametrize('batch', coro_batches)
 @pytest.mark.parametrize('size', string_sizes)
@@ -170,6 +176,7 @@ def benchmark_sync_string_get(benchmark, cache, size):
     benchmark.pedantic(get, rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='string_get')
 @pytest.mark.parametrize('size', string_sizes)
 def benchmark_async_string_get(benchmark, event_loop, aio_cache, size):
@@ -183,6 +190,7 @@ def benchmark_async_string_get(benchmark, event_loop, aio_cache, size):
     benchmark.pedantic(execute, args=(event_loop, get), rounds=10, iterations=1000, warmup_rounds=10)
 
 
+@pytest.mark.async_bench
 @pytest.mark.benchmark(group='string_get')
 @pytest.mark.parametrize('batch', coro_batches)
 @pytest.mark.parametrize('size', string_sizes)

@@ -3,3 +3,7 @@ ignite_ver: '2.10.0'
 ignite_mirror: http://archive.apache.org/dist/ignite
 thin_client_port: 10800
 ansible_python_interpreter: /usr/bin/python3
+thin_client:
+  #version: 0.3.4
+  version:
+    commit: latest

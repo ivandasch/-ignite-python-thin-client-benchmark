@@ -11,7 +11,7 @@ from benchmark.utils import execute
 try:
     from pyignite.aio_cache import AioCache
 except ImportError:
-    AioCache = None
+    AioCache = type('AioCache', (object,), {})
 
 from pyignite.datatypes import IntObject, ByteArrayObject
 

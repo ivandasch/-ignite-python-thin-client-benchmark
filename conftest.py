@@ -21,7 +21,7 @@ except ParameterError:
 
 @pytest.fixture(autouse=True)
 def skip_if_not_async(request):
-    if request.node.get_closest_marker('async_bench'):
+    if request.node.get_closest_marker('async_bench') and not WITH_ASYNC:
         pytest.skip('skipped async_bench: asyncio is not supported')
 
 
