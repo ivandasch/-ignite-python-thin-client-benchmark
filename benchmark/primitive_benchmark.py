@@ -124,6 +124,19 @@ def benchmark_sync_string_put(benchmark, cache, size):
     benchmark.pedantic(put, rounds=10, iterations=1000, warmup_rounds=10)
 
 
+bytearray_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024, 10 * 1024 * 1024]
+
+
+def bytearray_supplier(size):
+    data = bytearray(secrets.token_bytes(size))
+
+    def supply(key=None):
+        key = random.randrange(0, 1024) if key is None else key
+        return key, data
+
+    return supply
+
+
 @pytest.mark.async_bench
 @pytest.mark.benchmark(group='string_put')
 @pytest.mark.parametrize('size', string_sizes)
@@ -142,6 +155,45 @@ def benchmark_async_string_put(benchmark, event_loop, aio_cache, size):
 @pytest.mark.parametrize('size', string_sizes)
 def benchmark_async_string_put_batched(benchmark, event_loop, aio_cache, size, batch):
     kv_supplier = string_supplier(size)
+
+    async def put():
+        await aio_cache.put(*kv_supplier())
+
+    async def put_batched():
+        await asyncio.gather(*[put() for _ in range(0, batch)])
+
+    benchmark.pedantic(execute, args=(event_loop, put_batched), rounds=10, iterations=1000 // batch, warmup_rounds=10)
+
+
+@pytest.mark.benchmark(group='bytearray_put')
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_sync_bytearray_put(benchmark, cache, size):
+    kv_supplier = bytearray_supplier(size)
+
+    def put():
+        cache.put(*kv_supplier())
+
+    benchmark.pedantic(put, rounds=10, iterations=1000, warmup_rounds=10)
+
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_put')
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_put(benchmark, event_loop, aio_cache, size):
+    kv_supplier = bytearray_supplier(size)
+
+    async def put():
+        await aio_cache.put(*kv_supplier())
+
+    benchmark.pedantic(execute, args=(event_loop, put), rounds=10, iterations=1000, warmup_rounds=10)
+
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_put')
+@pytest.mark.parametrize('batch', coro_batches)
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_put_batched(benchmark, event_loop, aio_cache, size, batch):
+    kv_supplier = bytearray_supplier(size)
 
     async def put():
         await aio_cache.put(*kv_supplier())
@@ -196,6 +248,51 @@ def benchmark_async_string_get(benchmark, event_loop, aio_cache, size):
 @pytest.mark.parametrize('size', string_sizes)
 def benchmark_async_string_get_batched(benchmark, event_loop, aio_cache, size, batch):
     kv_supplier = string_supplier(size)
+    event_loop.run_until_complete(load_data(aio_cache, kv_supplier, 1025))
+
+    async def get():
+        k = random.randrange(0, 1025)
+        assert await aio_cache.get(k) == kv_supplier()[1]
+
+    async def get_batched():
+        await asyncio.gather(*[get() for _ in range(0, batch)])
+
+    benchmark.pedantic(execute, args=(event_loop, get_batched), rounds=10, iterations=1000 // batch, warmup_rounds=10)
+
+
+@pytest.mark.benchmark(group='bytearray_get')
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_sync_bytearray_get(benchmark, cache, size):
+    kv_supplier = bytearray_supplier(size)
+    load_data(cache, kv_supplier, 1025)
+
+    def get():
+        k = random.randrange(0, 1025)
+        assert cache.get(k) == kv_supplier()[1]
+
+    benchmark.pedantic(get, rounds=10, iterations=1000, warmup_rounds=10)
+
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_get')
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_get(benchmark, event_loop, aio_cache, size):
+    kv_supplier = bytearray_supplier(size)
+    event_loop.run_until_complete(load_data(aio_cache, kv_supplier, 1025))
+
+    async def get():
+        k = random.randrange(0, 1025)
+        assert await aio_cache.get(k) == kv_supplier()[1]
+
+    benchmark.pedantic(execute, args=(event_loop, get), rounds=10, iterations=1000, warmup_rounds=10)
+
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_get')
+@pytest.mark.parametrize('batch', coro_batches)
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_get_batched(benchmark, event_loop, aio_cache, size, batch):
+    kv_supplier = bytearray_supplier(size)
     event_loop.run_until_complete(load_data(aio_cache, kv_supplier, 1025))
 
     async def get():
