@@ -1,6 +1,6 @@
 [%conceal]
 === Scheme
-[plantuml, "zk_service_state"]
+[plantuml, "pa_state"]
 ----
 @startuml
 entity Client as cli
