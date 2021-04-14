@@ -1,0 +1,118 @@
+=== Проблемы конкурентности в python
+[%step]
+* *GIL* (sic!)
+* Из-за *GIL* многопоточность бессмысленна
+* Выход?
+
+=== Проблемы конкурентности в python
+[%step]
+* Помочь может event-loop
+* Это все еще 1 поток
+* Но IO не блокирующее.
+
+=== Проблемы конкурентности в python, asyncio
+[%step]
+* Есть накладные расходы на исполнение и создание сопрограмм.
+* Но если исполнять конкурентно IO, то можно добиться выигрыша.
+
+=== Отступление перед benchmarks
+* Используем https://uvloop.readthedocs.io[uvloop]
+** Сильно быстрее встроенного event loop
+** Использование бесшовное
+** Вы скорее всего и так его используете:
+*** https://www.uvicorn.org[uvunicorn]
+*** https://sanicframework.org/en/guide[sanic framework]
+
+[%conceal]
+=== Example
+[source, python]
+----
+import asyncio
+import uvloop
+
+async def main():
+    ...
+
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+loop = asyncio.get_event_loop()
+
+loop.run_until_complete(main())
+----
+
+=== Бенчмарки
+[source, python]
+----
+bytearray_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024, 10 * 1024 * 1024]
+coro_batches = [5, 10, 20]
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_put')
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_put(benchmark, event_loop, aio_cache, size):
+    kv_supplier = bytearray_supplier(size)
+
+    async def put():
+        await aio_cache.put(*kv_supplier())
+
+    benchmark.pedantic(execute, args=(event_loop, put), rounds=10, iterations=1000, warmup_rounds=10)
+
+
+@pytest.mark.async_bench
+@pytest.mark.benchmark(group='bytearray_put')
+@pytest.mark.parametrize('batch', coro_batches)
+@pytest.mark.parametrize('size', bytearray_sizes)
+def benchmark_async_bytearray_put_batched(benchmark, event_loop, aio_cache, size, batch):
+    kv_supplier = bytearray_supplier(size)
+
+    async def put():
+        await aio_cache.put(*kv_supplier())
+
+    async def put_batched():
+        await asyncio.gather(*[put() for _ in range(0, batch)])
+
+    benchmark.pedantic(execute, args=(event_loop, put_batched), rounds=10, iterations=1000 // batch, warmup_rounds=10)
+----
+
+[%conceal]
+=== get bytearray
+[.text-center]
+image::get_bytearray_aio.png[width=50%]
+
+[%conceal]
+=== get bytearray large
+[.text-center]
+image::get_bytearray_aio_large.png[width=50%]
+
+[%conceal]
+=== put bytearray
+[.text-center]
+image::put_bytearray_aio.png[width=50%]
+
+[%conceal]
+=== put bytearray large
+[.text-center]
+image::put_bytearray_aio_large.png[width=50%]
+
+[%conceal]
+=== get binary
+[.text-center]
+image::get_binary_object_aio.png[width=50%]
+
+[%conceal]
+=== get binary large
+[.text-center]
+image::get_binary_object_aio_large.png[width=50%]
+
+[%conceal]
+=== put binary
+[.text-center]
+image::put_binary_object_aio.png[width=50%]
+
+[%conceal]
+=== put binary large
+[.text-center]
+image::put_binary_object_aio_large.png[width=50%]
+
+=== Выводы
+* Partition Aware в asyncio must!
+* Эффект connection pool

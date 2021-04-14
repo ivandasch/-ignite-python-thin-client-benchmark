@@ -1,0 +1,262 @@
+{
+    "machine_info": {
+        "node": "python-test5",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 7.5.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.8.9",
+        "python_version": "3.8.9",
+        "python_build": [
+            "default",
+            "Apr  3 2021 01:00:00"
+        ],
+        "release": "4.15.0-58-generic",
+        "system": "Linux",
+        "cpu": {
+            "vendor_id": "unknown",
+            "hardware": "unknown",
+            "brand": "unknown"
+        }
+    },
+    "commit_info": {
+        "id": "unversioned",
+        "time": null,
+        "author_time": null,
+        "dirty": false,
+        "project": "thin_client",
+        "branch": "(unknown)"
+    },
+    "benchmarks": [
+        {
+            "group": "bytearray_put",
+            "name": "benchmark_sync_bytearray_put[simple-1024]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_put[simple-1024]",
+            "params": {
+                "client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0009041213998571038,
+                "max": 0.0009589457400143147,
+                "mean": 0.0009315731326350942,
+                "stddev": 1.550085475736784e-05,
+                "rounds": 10,
+                "median": 0.0009323786440072581,
+                "iqr": 1.990260393358763e-05,
+                "q1": 0.0009211643200833351,
+                "q3": 0.0009410669240169227,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0009041213998571038,
+                "hd15iqr": 0.0009589457400143147,
+                "ops": 1073.4530279671658,
+                "total": 0.009315731326350942,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "bytearray_put",
+            "name": "benchmark_sync_bytearray_put[simple-4096]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_put[simple-4096]",
+            "params": {
+                "client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004094180840998888,
+                "max": 0.004191609004978091,
+                "mean": 0.004120466126198881,
+                "stddev": 2.9811362410973684e-05,
+                "rounds": 10,
+                "median": 0.004106234353967011,
+                "iqr": 2.8478576103225205e-05,
+                "q1": 0.0041011243560351435,
+                "q3": 0.004129602932138369,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.004094180840998888,
+                "hd15iqr": 0.004191609004978091,
+                "ops": 242.69098916789235,
+                "total": 0.04120466126198881,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "bytearray_put",
+            "name": "benchmark_sync_bytearray_put[simple-10240]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_put[simple-10240]",
+            "params": {
+                "client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.015641703923000023,
+                "max": 0.01579452542983927,
+                "mean": 0.01573181928177364,
+                "stddev": 5.318996211082418e-05,
+                "rounds": 10,
+                "median": 0.015739008174510672,
+                "iqr": 9.4455958809702e-05,
+                "q1": 0.01568539967108518,
+                "q3": 0.01577985562989488,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.015641703923000023,
+                "hd15iqr": 0.01579452542983927,
+                "ops": 63.56543906899351,
+                "total": 0.15731819281773646,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "bytearray_get",
+            "name": "benchmark_sync_bytearray_get[simple-1024]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_get[simple-1024]",
+            "params": {
+                "client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0005555172341410071,
+                "max": 0.0005813243489246815,
+                "mean": 0.0005677124962443486,
+                "stddev": 1.0537839253980965e-05,
+                "rounds": 10,
+                "median": 0.000568758345558308,
+                "iqr": 2.0902324933558627e-05,
+                "q1": 0.0005569670600816608,
+                "q3": 0.0005778693850152194,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.0005555172341410071,
+                "hd15iqr": 0.0005813243489246815,
+                "ops": 1761.4549734511936,
+                "total": 0.005677124962443486,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "bytearray_get",
+            "name": "benchmark_sync_bytearray_get[simple-4096]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_get[simple-4096]",
+            "params": {
+                "client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0011363494200631976,
+                "max": 0.0011916019639465958,
+                "mean": 0.0011600335832685233,
+                "stddev": 1.8998908209611117e-05,
+                "rounds": 10,
+                "median": 0.0011582171514164658,
+                "iqr": 2.576977387070637e-05,
+                "q1": 0.001143239132128656,
+                "q3": 0.0011690089059993624,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0011363494200631976,
+                "hd15iqr": 0.0011916019639465958,
+                "ops": 862.044008400506,
+                "total": 0.011600335832685233,
+                "iterations": 1000
+            }
+        },
+        {
+            "group": "bytearray_get",
+            "name": "benchmark_sync_bytearray_get[simple-10240]",
+            "fullname": "benchmark/primitive_benchmark.py::benchmark_sync_bytearray_get[simple-10240]",
+            "params": {
+                "client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002212476472835988,
+                "max": 0.002306909750215709,
+                "mean": 0.002257721478003077,
+                "stddev": 2.5967087763447565e-05,
+                "rounds": 10,
+                "median": 0.002252132944995537,
+                "iqr": 2.0750944036990442e-05,
+                "q1": 0.002246493608923629,
+                "q3": 0.0022672445529606194,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 0.0022437621019780634,
+                "hd15iqr": 0.002306909750215709,
+                "ops": 442.9244305566362,
+                "total": 0.02257721478003077,
+                "iterations": 1000
+            }
+        }
+    ],
+    "datetime": "2021-04-13T12:07:06.715376",
+    "version": "3.2.3"
+}

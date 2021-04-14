@@ -1,0 +1,53 @@
+[%conceal]
+=== Context managers
+[source, python]
+----
+client = Client()
+try:
+    client.connect('127.0.0.1', 10800)
+    ...
+finally:
+    client.close()
+----
+[source, python]
+----
+client = Client()
+with client.connect('127.0.0.1', 10800):
+    ...
+----
+
+[%conceal]
+=== Cursors
+[source, python]
+----
+cursor = cache.scan()
+try:
+    for k,v in cursor:
+        ...
+finally:
+    cursor.close()
+----
+[source, python]
+----
+with cache.scan() as cursor:
+    for k,v in cursor:
+        ...
+----
+
+[%conceal]
+=== Cursors
+[source, python]
+----
+cursor = cache.sql('SELECT * FROM TABLE')
+try:
+    for row in cursor:
+        ...
+finally:
+    cursor.close()
+----
+[source, python]
+----
+with cache.sql('SELECT * FROM TABLE') as cursor:
+    for row in cursor:
+        ...
+----

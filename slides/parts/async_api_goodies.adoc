@@ -1,0 +1,53 @@
+[%conceal]
+=== Context managers
+[source, python]
+----
+client = AioClient()
+try:
+    await client.connect('127.0.0.1', 10800)
+    ...
+finally:
+    await client.close()
+----
+[source, python]
+----
+client = AioClient()
+async with client.connect('127.0.0.1', 10800):
+    ...
+----
+
+[%conceal]
+=== Cursors
+[source, python]
+----
+cursor = await cache.scan()
+try:
+    async for k,v in cursor:
+        ...
+finally:
+    await cursor.close()
+----
+[source, python]
+----
+async with cache.scan() as cursor:
+    async for k,v in cursor:
+        ...
+----
+
+[%conceal]
+=== Cursors
+[source, python]
+----
+cursor = await cache.sql('SELECT * FROM TABLE')
+try:
+    async for row in cursor:
+        ...
+finally:
+    await cursor.close()
+----
+[source, python]
+----
+async with cache.sql('SELECT * FROM TABLE') as cursor:
+    async for row in cursor:
+        ...
+----

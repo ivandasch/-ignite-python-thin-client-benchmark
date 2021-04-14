@@ -1,0 +1,48 @@
+[%conceal]
+=== Scheme
+[plantuml, "zk_service_state"]
+----
+@startuml
+entity Client as cli
+database "Random Node" as rnd
+database "Affinity Node" as aff
+
+== First cache request ==
+cli -> rnd: Cache request
+rnd -> cli: Reponse with latest affinity version
+
+== Next cache request ==
+cli -> rnd: Partition mapping request
+rnd -> cli: Partition mapping
+cli -> aff: Cache request
+aff -> cli: Cache response
+@enduml
+----
+[%conceal]
+=== Example
+[source, python]
+----
+client = Client(partition_aware=True)
+with client.connect([('192.168.0.1', 10800), ...]):
+    ...
+----
+
+[%conceal]
+=== get bytearray pa vs simple
+[.text-center]
+image::get_bytearray_pa.png[width=50%]
+
+[%conceal]
+=== put bytearray pa vs simple
+[.text-center]
+image::put_bytearray_pa.png[width=50%]
+
+[%conceal]
+=== get binary object pa vs simple
+[.text-center]
+image::get_binary_object_pa.png[width=50%]
+
+[%conceal]
+=== put binary object pa vs simple
+[.text-center]
+image::put_binary_object_pa.png[width=50%]

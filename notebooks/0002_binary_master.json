@@ -1,0 +1,4666 @@
+{
+    "machine_info": {
+        "node": "python-test5",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 7.5.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.8.9",
+        "python_version": "3.8.9",
+        "python_build": [
+            "default",
+            "Apr  3 2021 01:00:00"
+        ],
+        "release": "4.15.0-58-generic",
+        "system": "Linux",
+        "cpu": {
+            "vendor_id": "unknown",
+            "hardware": "unknown",
+            "brand": "unknown"
+        }
+    },
+    "commit_info": {
+        "id": "unversioned",
+        "time": null,
+        "author_time": null,
+        "dirty": false,
+        "project": "thin_client",
+        "branch": "(unknown)"
+    },
+    "benchmarks": [
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-1024]",
+            "params": {
+                "aio_client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004590861103497446,
+                "max": 0.00048652397934347393,
+                "mean": 0.0004717213197145611,
+                "stddev": 8.55296195001611e-06,
+                "rounds": 10,
+                "median": 0.0004724935896228999,
+                "iqr": 1.2043097522109738e-05,
+                "q1": 0.00046377455117180944,
+                "q3": 0.0004758176486939192,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0004590861103497446,
+                "hd15iqr": 0.00048652397934347393,
+                "ops": 2119.895705805921,
+                "total": 0.004717213197145611,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-4096]",
+            "params": {
+                "aio_client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.000483483059797436,
+                "max": 0.0005239090300165117,
+                "mean": 0.0005029649729840457,
+                "stddev": 1.1456384399252114e-05,
+                "rounds": 10,
+                "median": 0.0005034657998476177,
+                "iqr": 1.531467074528342e-05,
+                "q1": 0.0004955136496573686,
+                "q3": 0.0005108283204026521,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.000483483059797436,
+                "hd15iqr": 0.0005239090300165117,
+                "ops": 1988.2100219963436,
+                "total": 0.005029649729840458,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-10240]",
+            "params": {
+                "aio_client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0005115434713661671,
+                "max": 0.000537978548090905,
+                "mean": 0.0005223537338897586,
+                "stddev": 9.75539401853518e-06,
+                "rounds": 10,
+                "median": 0.0005176970502361655,
+                "iqr": 1.5182760544121257e-05,
+                "q1": 0.0005156092788092793,
+                "q3": 0.0005307920393534005,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0005115434713661671,
+                "hd15iqr": 0.000537978548090905,
+                "ops": 1914.4115091384558,
+                "total": 0.005223537338897586,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-102400]",
+            "params": {
+                "aio_client": "simple",
+                "size": 102400
+            },
+            "param": "simple-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0009788314113393427,
+                "max": 0.00106237597996369,
+                "mean": 0.0010213614541571586,
+                "stddev": 2.4921369234188035e-05,
+                "rounds": 10,
+                "median": 0.001018380019813776,
+                "iqr": 3.4403472673147925e-05,
+                "q1": 0.001005513488780707,
+                "q3": 0.001039916961453855,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0009788314113393427,
+                "hd15iqr": 0.00106237597996369,
+                "ops": 979.0853139501072,
+                "total": 0.010213614541571589,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-512000]",
+            "params": {
+                "aio_client": "simple",
+                "size": 512000
+            },
+            "param": "simple-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002932797458488494,
+                "max": 0.0035094059305265544,
+                "mean": 0.0030936476641800254,
+                "stddev": 0.00017445841556325886,
+                "rounds": 10,
+                "median": 0.003043571261223406,
+                "iqr": 0.0001934654521755872,
+                "q1": 0.002947575878351927,
+                "q3": 0.003141041330527514,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.002932797458488494,
+                "hd15iqr": 0.0035094059305265544,
+                "ops": 323.2430155439343,
+                "total": 0.030936476641800253,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[simple-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[simple-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "size": 1048576
+            },
+            "param": "simple-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0054808180290274325,
+                "max": 0.0060087884706445036,
+                "mean": 0.00572487826552242,
+                "stddev": 0.000151500912685736,
+                "rounds": 10,
+                "median": 0.005696081526111812,
+                "iqr": 0.0001744571886956696,
+                "q1": 0.0056462341221049425,
+                "q3": 0.005820691310800612,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0054808180290274325,
+                "hd15iqr": 0.0060087884706445036,
+                "ops": 174.676203339102,
+                "total": 0.05724878265522421,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 1024
+            },
+            "param": "partition_aware-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004042670200578868,
+                "max": 0.00042323001194745304,
+                "mean": 0.00041292543895542623,
+                "stddev": 7.070706281890989e-06,
+                "rounds": 10,
+                "median": 0.00040908518363721666,
+                "iqr": 1.2569250538945202e-05,
+                "q1": 0.0004078810196369886,
+                "q3": 0.0004204502701759338,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0004042670200578868,
+                "hd15iqr": 0.00042323001194745304,
+                "ops": 2421.744716260861,
+                "total": 0.004129254389554262,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 4096
+            },
+            "param": "partition_aware-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004321192111819982,
+                "max": 0.0004737318493425846,
+                "mean": 0.0004581449253018945,
+                "stddev": 1.2656214513620943e-05,
+                "rounds": 10,
+                "median": 0.0004618159856181592,
+                "iqr": 1.4870469458401242e-05,
+                "q1": 0.0004516134806908667,
+                "q3": 0.0004664839501492679,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0004321192111819982,
+                "hd15iqr": 0.0004737318493425846,
+                "ops": 2182.715435167267,
+                "total": 0.0045814492530189465,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 10240
+            },
+            "param": "partition_aware-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00047090689884498715,
+                "max": 0.0005001399293541909,
+                "mean": 0.0004888161758426577,
+                "stddev": 1.0812896690471121e-05,
+                "rounds": 10,
+                "median": 0.0004904583864845335,
+                "iqr": 1.3153620529919835e-05,
+                "q1": 0.0004844932584092021,
+                "q3": 0.0004976468789391219,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00047090689884498715,
+                "hd15iqr": 0.0005001399293541909,
+                "ops": 2045.7588136810848,
+                "total": 0.004888161758426577,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 102400
+            },
+            "param": "partition_aware-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.000735733590554446,
+                "max": 0.0008868591277860105,
+                "mean": 0.0007735153858084232,
+                "stddev": 4.204614634078474e-05,
+                "rounds": 10,
+                "median": 0.0007646398444194347,
+                "iqr": 2.1789919119328204e-05,
+                "q1": 0.0007534737908281386,
+                "q3": 0.0007752637099474668,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.000735733590554446,
+                "hd15iqr": 0.0008868591277860105,
+                "ops": 1292.7991069691152,
+                "total": 0.007735153858084231,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 512000
+            },
+            "param": "partition_aware-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0018332624505273997,
+                "max": 0.0020925775403156876,
+                "mean": 0.001940637926571071,
+                "stddev": 8.596767477656748e-05,
+                "rounds": 10,
+                "median": 0.0019394397595897317,
+                "iqr": 0.00012227517087012537,
+                "q1": 0.0018605077383108436,
+                "q3": 0.001982782909180969,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0018332624505273997,
+                "hd15iqr": 0.0020925775403156876,
+                "ops": 515.29447420772,
+                "total": 0.019406379265710712,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put[partition_aware-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put[partition_aware-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 1048576
+            },
+            "param": "partition_aware-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003209891349542886,
+                "max": 0.003946402238216251,
+                "mean": 0.0034509563287720086,
+                "stddev": 0.00020361377092520408,
+                "rounds": 10,
+                "median": 0.003440030210185796,
+                "iqr": 0.00019911762792617109,
+                "q1": 0.0033226950606331227,
+                "q3": 0.003521812688559294,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.003209891349542886,
+                "hd15iqr": 0.003946402238216251,
+                "ops": 289.77474784673404,
+                "total": 0.03450956328772009,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 1024
+            },
+            "param": "simple-5-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.001847642008215189,
+                "max": 0.002565751550719142,
+                "mean": 0.002055705595994368,
+                "stddev": 0.00020013235424501505,
+                "rounds": 10,
+                "median": 0.0020165584748610852,
+                "iqr": 0.0001694615581072866,
+                "q1": 0.0019479845999740065,
+                "q3": 0.002117446158081293,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.001847642008215189,
+                "hd15iqr": 0.002565751550719142,
+                "ops": 486.4509791424139,
+                "total": 0.02055705595994368,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 4096
+            },
+            "param": "simple-5-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0020214297575876115,
+                "max": 0.0029761225916445254,
+                "mean": 0.0022638328454922885,
+                "stddev": 0.0002729015793495615,
+                "rounds": 10,
+                "median": 0.0021632584277540444,
+                "iqr": 0.0002129461499862373,
+                "q1": 0.002125134808011353,
+                "q3": 0.0023380809579975903,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0020214297575876115,
+                "hd15iqr": 0.0029761225916445254,
+                "ops": 441.72872656706335,
+                "total": 0.022638328454922883,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 10240
+            },
+            "param": "simple-5-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0021916687954217197,
+                "max": 0.002864819741807878,
+                "mean": 0.002327972821658477,
+                "stddev": 0.00019770339020846022,
+                "rounds": 10,
+                "median": 0.0022673487430438398,
+                "iqr": 0.00011517874663695676,
+                "q1": 0.0022279363009147348,
+                "q3": 0.0023431150475516915,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0021916687954217197,
+                "hd15iqr": 0.002864819741807878,
+                "ops": 429.5582795024159,
+                "total": 0.02327972821658477,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 102400
+            },
+            "param": "simple-5-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0038527225027792157,
+                "max": 0.005334740248508751,
+                "mean": 0.00430268810596317,
+                "stddev": 0.0004842380897363042,
+                "rounds": 10,
+                "median": 0.0041782367217820145,
+                "iqr": 0.00021587389055639523,
+                "q1": 0.004020432953257114,
+                "q3": 0.004236306843813509,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0038527225027792157,
+                "hd15iqr": 0.00502778475638479,
+                "ops": 232.41284875240726,
+                "total": 0.043026881059631705,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 512000
+            },
+            "param": "simple-5-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.013150055194273591,
+                "max": 0.016131791146472098,
+                "mean": 0.015033785419072956,
+                "stddev": 0.0007593702080334805,
+                "rounds": 10,
+                "median": 0.015064119728049264,
+                "iqr": 0.0003333001979626722,
+                "q1": 0.014991688751615584,
+                "q3": 0.015324988949578256,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.014840804249979555,
+                "hd15iqr": 0.016131791146472098,
+                "ops": 66.51684669726143,
+                "total": 0.15033785419072956,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-5-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-5-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 1048576
+            },
+            "param": "simple-5-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.025404145300853997,
+                "max": 0.030195211851969363,
+                "mean": 0.0275886514398735,
+                "stddev": 0.0017777523113845207,
+                "rounds": 10,
+                "median": 0.027370381454238667,
+                "iqr": 0.003102170454803852,
+                "q1": 0.026085702795535327,
+                "q3": 0.02918787325033918,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.025404145300853997,
+                "hd15iqr": 0.030195211851969363,
+                "ops": 36.246788001921466,
+                "total": 0.27588651439873496,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 1024
+            },
+            "param": "simple-10-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00343770869076252,
+                "max": 0.003912286297418177,
+                "mean": 0.0037259369785897435,
+                "stddev": 0.00014478482221564053,
+                "rounds": 10,
+                "median": 0.0037650112994015213,
+                "iqr": 0.00021590250544249994,
+                "q1": 0.0036237471038475634,
+                "q3": 0.0038396496092900634,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.00343770869076252,
+                "hd15iqr": 0.003912286297418177,
+                "ops": 268.3888658735439,
+                "total": 0.03725936978589743,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 4096
+            },
+            "param": "simple-10-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003780016698874533,
+                "max": 0.004795017605647445,
+                "mean": 0.004098457337822765,
+                "stddev": 0.0002822541927685614,
+                "rounds": 10,
+                "median": 0.0040960335521958765,
+                "iqr": 0.00027041430585086337,
+                "q1": 0.003877176297828555,
+                "q3": 0.0041475906036794186,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.003780016698874533,
+                "hd15iqr": 0.004795017605647445,
+                "ops": 243.9942440711687,
+                "total": 0.04098457337822765,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 10240
+            },
+            "param": "simple-10-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0043451552977785465,
+                "max": 0.005582872801460326,
+                "mean": 0.004549955478869379,
+                "stddev": 0.0003722441427767305,
+                "rounds": 10,
+                "median": 0.004454139340668916,
+                "iqr": 0.00018207659013569355,
+                "q1": 0.0043531232979148625,
+                "q3": 0.004535199888050556,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0043451552977785465,
+                "hd15iqr": 0.005582872801460326,
+                "ops": 219.78237032079505,
+                "total": 0.04549955478869378,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 102400
+            },
+            "param": "simple-10-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007969822292216122,
+                "max": 0.009906624909490347,
+                "mean": 0.0083851760905236,
+                "stddev": 0.0005558443545753828,
+                "rounds": 10,
+                "median": 0.008270647656172515,
+                "iqr": 0.0002196972956880934,
+                "q1": 0.008110676310025156,
+                "q3": 0.008330373605713249,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.007969822292216122,
+                "hd15iqr": 0.009906624909490347,
+                "ops": 119.25807987862501,
+                "total": 0.083851760905236,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 512000
+            },
+            "param": "simple-10-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.027053025993518533,
+                "max": 0.0348557465011254,
+                "mean": 0.030327197844162584,
+                "stddev": 0.0022982867291047302,
+                "rounds": 10,
+                "median": 0.03002028794726357,
+                "iqr": 0.0024057560134679093,
+                "q1": 0.02847506229300052,
+                "q3": 0.030880818306468428,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.027053025993518533,
+                "hd15iqr": 0.0348557465011254,
+                "ops": 32.973702520705565,
+                "total": 0.3032719784416258,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-10-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-10-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 1048576
+            },
+            "param": "simple-10-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.053722795890644194,
+                "max": 0.06241609761491418,
+                "mean": 0.05811124649131671,
+                "stddev": 0.0030084262883829467,
+                "rounds": 10,
+                "median": 0.0581842971034348,
+                "iqr": 0.005638402397744359,
+                "q1": 0.05549027610104531,
+                "q3": 0.06112867849878967,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.053722795890644194,
+                "hd15iqr": 0.06241609761491418,
+                "ops": 17.20837291193582,
+                "total": 0.581112464913167,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 1024
+            },
+            "param": "simple-20-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007042577397078276,
+                "max": 0.007863974617794155,
+                "mean": 0.007397887660190463,
+                "stddev": 0.0002450732400939969,
+                "rounds": 10,
+                "median": 0.007373902411200106,
+                "iqr": 0.00023566577583551337,
+                "q1": 0.00729785361327231,
+                "q3": 0.007533519389107823,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.007042577397078276,
+                "hd15iqr": 0.007863974617794155,
+                "ops": 135.17372065288353,
+                "total": 0.07397887660190464,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 4096
+            },
+            "param": "simple-20-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007412902032956481,
+                "max": 0.010273704398423433,
+                "mean": 0.007948106187395752,
+                "stddev": 0.0008400529190872604,
+                "rounds": 10,
+                "median": 0.007706966320984066,
+                "iqr": 0.0003681689966469996,
+                "q1": 0.0075919718015939,
+                "q3": 0.0079601407982409,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.007412902032956481,
+                "hd15iqr": 0.010273704398423433,
+                "ops": 125.81613486566371,
+                "total": 0.07948106187395751,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 10240
+            },
+            "param": "simple-20-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007871654396876693,
+                "max": 0.011408282583579421,
+                "mean": 0.00873084091115743,
+                "stddev": 0.0009730816468159031,
+                "rounds": 10,
+                "median": 0.008469640696421265,
+                "iqr": 0.00029455558396875893,
+                "q1": 0.008358250604942441,
+                "q3": 0.0086528061889112,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.008261495782062412,
+                "hd15iqr": 0.011408282583579421,
+                "ops": 114.53650457907978,
+                "total": 0.0873084091115743,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 102400
+            },
+            "param": "simple-20-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.016496750386431815,
+                "max": 0.03077711700461805,
+                "mean": 0.01925781642552465,
+                "stddev": 0.0041826075110648255,
+                "rounds": 10,
+                "median": 0.017950571002438666,
+                "iqr": 0.0021527601871639476,
+                "q1": 0.0173774816095829,
+                "q3": 0.01953024179674685,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.016496750386431815,
+                "hd15iqr": 0.03077711700461805,
+                "ops": 51.926967102801036,
+                "total": 0.19257816425524651,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 512000
+            },
+            "param": "simple-20-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.059925721399486064,
+                "max": 0.07195085240527987,
+                "mean": 0.06408407245762646,
+                "stddev": 0.0037682726336695864,
+                "rounds": 10,
+                "median": 0.06307269621174783,
+                "iqr": 0.00479907458648085,
+                "q1": 0.061702597374096516,
+                "q3": 0.06650167196057737,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.059925721399486064,
+                "hd15iqr": 0.07195085240527987,
+                "ops": 15.604501425236636,
+                "total": 0.6408407245762646,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[simple-20-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[simple-20-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 1048576
+            },
+            "param": "simple-20-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.11349942018277943,
+                "max": 0.13150187782011927,
+                "mean": 0.11913361840881408,
+                "stddev": 0.005513115575541188,
+                "rounds": 10,
+                "median": 0.11766077221836894,
+                "iqr": 0.005971862981095907,
+                "q1": 0.11522162142209709,
+                "q3": 0.121193484403193,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.11349942018277943,
+                "hd15iqr": 0.13150187782011927,
+                "ops": 8.393936265483356,
+                "total": 1.1913361840881407,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 1024
+            },
+            "param": "partition_aware-5-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0012152123963460326,
+                "max": 0.0012870814418420196,
+                "mean": 0.0012410349678248166,
+                "stddev": 2.246434104339838e-05,
+                "rounds": 10,
+                "median": 0.001236640225397423,
+                "iqr": 2.6411656290292783e-05,
+                "q1": 0.0012250430998392403,
+                "q3": 0.001251454756129533,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0012152123963460326,
+                "hd15iqr": 0.0012870814418420196,
+                "ops": 805.7790682181317,
+                "total": 0.012410349678248169,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 4096
+            },
+            "param": "partition_aware-5-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0012742360006086529,
+                "max": 0.001898390450514853,
+                "mean": 0.001386488910065964,
+                "stddev": 0.00018584152510271946,
+                "rounds": 10,
+                "median": 0.0013274152996018529,
+                "iqr": 6.104714702814817e-05,
+                "q1": 0.0013051806017756462,
+                "q3": 0.0013662277488037944,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0012742360006086529,
+                "hd15iqr": 0.001898390450514853,
+                "ops": 721.2463026137178,
+                "total": 0.013864889100659639,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 10240
+            },
+            "param": "partition_aware-5-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0013103511068038643,
+                "max": 0.0028508587973192336,
+                "mean": 0.001593792726052925,
+                "stddev": 0.0004935118124854046,
+                "rounds": 10,
+                "median": 0.0013723583018872888,
+                "iqr": 0.00014945184811949726,
+                "q1": 0.0013465967494994402,
+                "q3": 0.0014960485976189374,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.0013103511068038643,
+                "hd15iqr": 0.0020575240487232804,
+                "ops": 627.4341598211016,
+                "total": 0.01593792726052925,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 102400
+            },
+            "param": "partition_aware-5-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0020533969043754043,
+                "max": 0.0029958940460346637,
+                "mean": 0.00222199791460298,
+                "stddev": 0.0002760908904857333,
+                "rounds": 10,
+                "median": 0.00214198807370849,
+                "iqr": 6.840499117970493e-05,
+                "q1": 0.002117687999270856,
+                "q3": 0.002186092990450561,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0020533969043754043,
+                "hd15iqr": 0.0029958940460346637,
+                "ops": 450.0454268782142,
+                "total": 0.022219979146029804,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 512000
+            },
+            "param": "partition_aware-5-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0061713089002296325,
+                "max": 0.008593027759343386,
+                "mean": 0.006853665772359819,
+                "stddev": 0.0007190228378176548,
+                "rounds": 10,
+                "median": 0.006611711753066629,
+                "iqr": 0.0005060354946181183,
+                "q1": 0.006465085351374,
+                "q3": 0.006971120845992118,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0061713089002296325,
+                "hd15iqr": 0.008593027759343386,
+                "ops": 145.90731926743567,
+                "total": 0.06853665772359818,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-5-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-5-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 1048576
+            },
+            "param": "partition_aware-5-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.011340546049177646,
+                "max": 0.013941911701112985,
+                "mean": 0.012142598538193852,
+                "stddev": 0.0007507850832223928,
+                "rounds": 10,
+                "median": 0.011881682928651572,
+                "iqr": 0.0008013339946046465,
+                "q1": 0.011674910609144717,
+                "q3": 0.012476244603749364,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.011340546049177646,
+                "hd15iqr": 0.013941911701112985,
+                "ops": 82.35469507243916,
+                "total": 0.12142598538193851,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 1024
+            },
+            "param": "partition_aware-10-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002032104996033013,
+                "max": 0.003189934603869915,
+                "mean": 0.0022288957587443294,
+                "stddev": 0.0003407022470211839,
+                "rounds": 10,
+                "median": 0.0021418596967123452,
+                "iqr": 7.142920512706076e-05,
+                "q1": 0.0020926947938278316,
+                "q3": 0.0021641239989548923,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.002032104996033013,
+                "hd15iqr": 0.003189934603869915,
+                "ops": 448.65265505433956,
+                "total": 0.022288957587443294,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 4096
+            },
+            "param": "partition_aware-10-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0021228570956736805,
+                "max": 0.002518038102425635,
+                "mean": 0.002258694721385837,
+                "stddev": 0.00011420805641487855,
+                "rounds": 10,
+                "median": 0.002229212794918567,
+                "iqr": 0.00013502100482583063,
+                "q1": 0.0021736189955845475,
+                "q3": 0.002308640000410378,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0021228570956736805,
+                "hd15iqr": 0.002518038102425635,
+                "ops": 442.73357994410316,
+                "total": 0.022586947213858365,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 10240
+            },
+            "param": "partition_aware-10-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002353055402636528,
+                "max": 0.0034963181940838696,
+                "mean": 0.0025517795700579883,
+                "stddev": 0.0003477300956382426,
+                "rounds": 10,
+                "median": 0.002457822393625975,
+                "iqr": 0.00011503689456731064,
+                "q1": 0.002366065117530525,
+                "q3": 0.0024811020120978355,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.002353055402636528,
+                "hd15iqr": 0.002703481400385499,
+                "ops": 391.8833788520673,
+                "total": 0.02551779570057988,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 102400
+            },
+            "param": "partition_aware-10-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0037775791948661207,
+                "max": 0.004962065094150603,
+                "mean": 0.004007038017734885,
+                "stddev": 0.0003490966568277634,
+                "rounds": 10,
+                "median": 0.003883305110502988,
+                "iqr": 0.00019072869326919274,
+                "q1": 0.0038358391961082817,
+                "q3": 0.0040265678893774744,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0037775791948661207,
+                "hd15iqr": 0.004962065094150603,
+                "ops": 249.56089649613153,
+                "total": 0.04007038017734886,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 512000
+            },
+            "param": "partition_aware-10-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.012423482700251042,
+                "max": 0.014987576706334948,
+                "mean": 0.013394219751935452,
+                "stddev": 0.0007701215063553562,
+                "rounds": 10,
+                "median": 0.01312220385298133,
+                "iqr": 0.0009131606901064526,
+                "q1": 0.012932170508429408,
+                "q3": 0.01384533119853586,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.012423482700251042,
+                "hd15iqr": 0.014987576706334948,
+                "ops": 74.65907074247464,
+                "total": 0.13394219751935452,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-10-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-10-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 1048576
+            },
+            "param": "partition_aware-10-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.023766796011477707,
+                "max": 0.031018405104987323,
+                "mean": 0.025445531990844757,
+                "stddev": 0.0020915133305376126,
+                "rounds": 10,
+                "median": 0.024913308653049172,
+                "iqr": 0.001419523498043418,
+                "q1": 0.024281542003154754,
+                "q3": 0.025701065501198172,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.023766796011477707,
+                "hd15iqr": 0.031018405104987323,
+                "ops": 39.29963029893805,
+                "total": 0.25445531990844755,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 1024
+            },
+            "param": "partition_aware-20-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0037677555810660124,
+                "max": 0.004018492577597499,
+                "mean": 0.00390786187723279,
+                "stddev": 9.080412810341392e-05,
+                "rounds": 10,
+                "median": 0.003940035589039326,
+                "iqr": 0.00017216405831277414,
+                "q1": 0.0037927889730781316,
+                "q3": 0.003964953031390906,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0037677555810660124,
+                "hd15iqr": 0.004018492577597499,
+                "ops": 255.8944075853862,
+                "total": 0.0390786187723279,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 4096
+            },
+            "param": "partition_aware-20-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003938983986154198,
+                "max": 0.004383995989337563,
+                "mean": 0.004114146213978529,
+                "stddev": 0.00015072698088628442,
+                "rounds": 10,
+                "median": 0.004044907004572451,
+                "iqr": 0.0002538978587836027,
+                "q1": 0.0039982111658900974,
+                "q3": 0.0042521090246737,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.003938983986154198,
+                "hd15iqr": 0.004383995989337563,
+                "ops": 243.06379695556902,
+                "total": 0.041141462139785284,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 10240
+            },
+            "param": "partition_aware-20-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004080231999978423,
+                "max": 0.005291488440707326,
+                "mean": 0.004345772960223257,
+                "stddev": 0.0003594883603268744,
+                "rounds": 10,
+                "median": 0.004219159088097513,
+                "iqr": 0.00023388657718896848,
+                "q1": 0.004146950598806143,
+                "q3": 0.004380837175995111,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.004080231999978423,
+                "hd15iqr": 0.005291488440707326,
+                "ops": 230.10866171633285,
+                "total": 0.04345772960223258,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 102400
+            },
+            "param": "partition_aware-20-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007348862010985613,
+                "max": 0.012838189583271742,
+                "mean": 0.008324220278300345,
+                "stddev": 0.0016040837576677056,
+                "rounds": 10,
+                "median": 0.007848134823143482,
+                "iqr": 0.000399158010259271,
+                "q1": 0.007742666779085994,
+                "q3": 0.008141824789345265,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.007348862010985613,
+                "hd15iqr": 0.012838189583271742,
+                "ops": 120.13137165613088,
+                "total": 0.08324220278300345,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 512000
+            },
+            "param": "partition_aware-20-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0255759138148278,
+                "max": 0.03626871099695563,
+                "mean": 0.02770516525954008,
+                "stddev": 0.0031353842186681723,
+                "rounds": 10,
+                "median": 0.026648273109458387,
+                "iqr": 0.001356142386794091,
+                "q1": 0.02630770020186901,
+                "q3": 0.027663842588663102,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0255759138148278,
+                "hd15iqr": 0.03626871099695563,
+                "ops": 36.094352465761126,
+                "total": 0.2770516525954008,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_async_binary_put_batch[partition_aware-20-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_put_batch[partition_aware-20-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 1048576
+            },
+            "param": "partition_aware-20-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04728369819931686,
+                "max": 0.05876684300601483,
+                "mean": 0.05119279310107231,
+                "stddev": 0.0031003583675436935,
+                "rounds": 10,
+                "median": 0.05120799958240241,
+                "iqr": 0.002948816167190671,
+                "q1": 0.049208480212837455,
+                "q3": 0.052157296380028126,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.04728369819931686,
+                "hd15iqr": 0.05876684300601483,
+                "ops": 19.533999600796413,
+                "total": 0.5119279310107232,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-1024]",
+            "params": {
+                "client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00034007666865363715,
+                "max": 0.0005961939599364996,
+                "mean": 0.00038832407095469536,
+                "stddev": 8.412418624912094e-05,
+                "rounds": 10,
+                "median": 0.0003508069552481174,
+                "iqr": 2.3295539431273955e-05,
+                "q1": 0.0003459781198762357,
+                "q3": 0.00036927365930750967,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.00034007666865363715,
+                "hd15iqr": 0.00048045468050986526,
+                "ops": 2575.1687180799745,
+                "total": 0.003883240709546954,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-4096]",
+            "params": {
+                "client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003440460120327771,
+                "max": 0.0004989880509674549,
+                "mean": 0.0003745350542012602,
+                "stddev": 4.522465165418007e-05,
+                "rounds": 10,
+                "median": 0.0003648839890956878,
+                "iqr": 2.5629969313740704e-05,
+                "q1": 0.00034954627975821497,
+                "q3": 0.0003751762490719557,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003440460120327771,
+                "hd15iqr": 0.0004989880509674549,
+                "ops": 2669.977052301865,
+                "total": 0.003745350542012602,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-10240]",
+            "params": {
+                "client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003964050696231425,
+                "max": 0.0005386717221699655,
+                "mean": 0.00041930415504612027,
+                "stddev": 4.243514957022173e-05,
+                "rounds": 10,
+                "median": 0.00040696930489502847,
+                "iqr": 1.0463788639754031e-05,
+                "q1": 0.00040169066982343794,
+                "q3": 0.00041215445846319197,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003964050696231425,
+                "hd15iqr": 0.0005386717221699655,
+                "ops": 2384.9036265572126,
+                "total": 0.0041930415504612024,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-102400]",
+            "params": {
+                "client": "simple",
+                "size": 102400
+            },
+            "param": "simple-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008152989600785077,
+                "max": 0.0009050145791843534,
+                "mean": 0.0008740834591444581,
+                "stddev": 2.4406035971278127e-05,
+                "rounds": 10,
+                "median": 0.0008811373799107969,
+                "iqr": 2.0401340443640913e-05,
+                "q1": 0.0008670004294253886,
+                "q3": 0.0008874017698690295,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0008600604115054011,
+                "hd15iqr": 0.0009050145791843534,
+                "ops": 1144.0555127067469,
+                "total": 0.008740834591444582,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-512000]",
+            "params": {
+                "client": "simple",
+                "size": 512000
+            },
+            "param": "simple-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002799065799918026,
+                "max": 0.00473289221059531,
+                "mean": 0.003094331436790526,
+                "stddev": 0.0006056867193762737,
+                "rounds": 10,
+                "median": 0.0028310729295480995,
+                "iqr": 0.00020022754091769462,
+                "q1": 0.002808732548728585,
+                "q3": 0.0030089600896462797,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.002799065799918026,
+                "hd15iqr": 0.0034127414599061014,
+                "ops": 323.17158663430405,
+                "total": 0.03094331436790526,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[simple-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[simple-1048576]",
+            "params": {
+                "client": "simple",
+                "size": 1048576
+            },
+            "param": "simple-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0052918721688911315,
+                "max": 0.005979340360499919,
+                "mean": 0.005596442590234801,
+                "stddev": 0.0002037969636824104,
+                "rounds": 10,
+                "median": 0.005592421210603788,
+                "iqr": 0.00014230034081265386,
+                "q1": 0.005512073920108378,
+                "q3": 0.0056543742609210315,
+                "iqr_outliers": 2,
+                "stddev_outliers": 4,
+                "outliers": "4;2",
+                "ld15iqr": 0.0053479936812072994,
+                "hd15iqr": 0.005979340360499919,
+                "ops": 178.68493849019268,
+                "total": 0.055964425902348014,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-1024]",
+            "params": {
+                "client": "partition_aware",
+                "size": 1024
+            },
+            "param": "partition_aware-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0002833319711498916,
+                "max": 0.0004117979109287262,
+                "mean": 0.00030811802204698324,
+                "stddev": 3.6891984959314674e-05,
+                "rounds": 10,
+                "median": 0.00029773056972771884,
+                "iqr": 4.339690785855018e-06,
+                "q1": 0.00029693376971408727,
+                "q3": 0.0003012734604999423,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.0002909308089874685,
+                "hd15iqr": 0.0004117979109287262,
+                "ops": 3245.509604912092,
+                "total": 0.0030811802204698327,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-4096]",
+            "params": {
+                "client": "partition_aware",
+                "size": 4096
+            },
+            "param": "partition_aware-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003160449909046292,
+                "max": 0.000455257089342922,
+                "mean": 0.00033682346576824785,
+                "stddev": 4.176522632197909e-05,
+                "rounds": 10,
+                "median": 0.00032442576950415965,
+                "iqr": 4.229459445923543e-06,
+                "q1": 0.0003219777694903314,
+                "q3": 0.00032620722893625495,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003160449909046292,
+                "hd15iqr": 0.000455257089342922,
+                "ops": 2968.9142878425587,
+                "total": 0.0033682346576824783,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-10240]",
+            "params": {
+                "client": "partition_aware",
+                "size": 10240
+            },
+            "param": "partition_aware-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00032822615001350643,
+                "max": 0.00035768528003245594,
+                "mean": 0.0003386705401353538,
+                "stddev": 9.14045181041381e-06,
+                "rounds": 10,
+                "median": 0.0003385153948329389,
+                "iqr": 1.2876971159130318e-05,
+                "q1": 0.0003305883100256324,
+                "q3": 0.0003434652811847627,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00032822615001350643,
+                "hd15iqr": 0.00035768528003245594,
+                "ops": 2952.722134025409,
+                "total": 0.0033867054013535383,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-102400]",
+            "params": {
+                "client": "partition_aware",
+                "size": 102400
+            },
+            "param": "partition_aware-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006138853100128472,
+                "max": 0.000640827810857445,
+                "mean": 0.00062451277137734,
+                "stddev": 7.961580155205584e-06,
+                "rounds": 10,
+                "median": 0.0006248356658034027,
+                "iqr": 1.0819190647453139e-05,
+                "q1": 0.0006181184505112469,
+                "q3": 0.0006289376411587,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0006138853100128472,
+                "hd15iqr": 0.000640827810857445,
+                "ops": 1601.2482783891462,
+                "total": 0.006245127713773399,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-512000]",
+            "params": {
+                "client": "partition_aware",
+                "size": 512000
+            },
+            "param": "partition_aware-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0016866397904232145,
+                "max": 0.0019157053902745247,
+                "mean": 0.0017906044330447913,
+                "stddev": 8.098667692148545e-05,
+                "rounds": 10,
+                "median": 0.0017746196105144917,
+                "iqr": 0.00012489099055528635,
+                "q1": 0.001721703379880637,
+                "q3": 0.0018465943704359233,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0016866397904232145,
+                "hd15iqr": 0.0019157053902745247,
+                "ops": 558.4706379284304,
+                "total": 0.01790604433044791,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_put",
+            "name": "benchmark_sync_binary_put[partition_aware-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_put[partition_aware-1048576]",
+            "params": {
+                "client": "partition_aware",
+                "size": 1048576
+            },
+            "param": "partition_aware-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0031875189999118446,
+                "max": 0.004035143638029695,
+                "mean": 0.0035547951012849808,
+                "stddev": 0.0003116959835301849,
+                "rounds": 10,
+                "median": 0.003489090125076473,
+                "iqr": 0.000498188356868923,
+                "q1": 0.0032847606018185614,
+                "q3": 0.0037829489586874844,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0031875189999118446,
+                "hd15iqr": 0.004035143638029695,
+                "ops": 281.31016598917944,
+                "total": 0.03554795101284981,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-1024]",
+            "params": {
+                "client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004243562696501613,
+                "max": 0.0004872421617619693,
+                "mean": 0.0004408924141898751,
+                "stddev": 1.8760358788645163e-05,
+                "rounds": 10,
+                "median": 0.00043932059896178543,
+                "iqr": 2.0616501569747914e-05,
+                "q1": 0.00042463806923478844,
+                "q3": 0.00044525457080453636,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0004243562696501613,
+                "hd15iqr": 0.0004872421617619693,
+                "ops": 2268.127025586199,
+                "total": 0.004408924141898751,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-4096]",
+            "params": {
+                "client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004324919590726495,
+                "max": 0.0006045996607281268,
+                "mean": 0.00047570827067829665,
+                "stddev": 4.90042361951199e-05,
+                "rounds": 10,
+                "median": 0.0004630966146942228,
+                "iqr": 4.1133270133286725e-05,
+                "q1": 0.00044629990123212337,
+                "q3": 0.0004874331713654101,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0004324919590726495,
+                "hd15iqr": 0.0006045996607281268,
+                "ops": 2102.128681879197,
+                "total": 0.0047570827067829665,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-10240]",
+            "params": {
+                "client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004601860395632684,
+                "max": 0.00048092905897647144,
+                "mean": 0.0004707764880731702,
+                "stddev": 7.31837466729331e-06,
+                "rounds": 10,
+                "median": 0.0004720447107683867,
+                "iqr": 1.3000108301639566e-05,
+                "q1": 0.0004631251911632717,
+                "q3": 0.00047612529946491124,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.0004601860395632684,
+                "hd15iqr": 0.00048092905897647144,
+                "ops": 2124.1502609717745,
+                "total": 0.0047077648807317025,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-102400]",
+            "params": {
+                "client": "simple",
+                "size": 102400
+            },
+            "param": "simple-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008660468715243042,
+                "max": 0.0010166640300303697,
+                "mean": 0.0009265388820786028,
+                "stddev": 4.028628949927639e-05,
+                "rounds": 10,
+                "median": 0.0009218157758004963,
+                "iqr": 3.6094947718083885e-05,
+                "q1": 0.0009105641907081008,
+                "q3": 0.0009466591384261847,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0008660468715243042,
+                "hd15iqr": 0.0010166640300303697,
+                "ops": 1079.2855209234112,
+                "total": 0.009265388820786029,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-512000]",
+            "params": {
+                "client": "simple",
+                "size": 512000
+            },
+            "param": "simple-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0024257117905654014,
+                "max": 0.0027619223087094725,
+                "mean": 0.002607218763092533,
+                "stddev": 0.00010392768429630336,
+                "rounds": 10,
+                "median": 0.002614657389931381,
+                "iqr": 0.00010814577108249042,
+                "q1": 0.0025843999395146968,
+                "q3": 0.002692545710597187,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0024257117905654014,
+                "hd15iqr": 0.0027619223087094725,
+                "ops": 383.5504769127457,
+                "total": 0.02607218763092533,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[simple-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[simple-1048576]",
+            "params": {
+                "client": "simple",
+                "size": 1048576
+            },
+            "param": "simple-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005863916880916804,
+                "max": 0.006541689939331264,
+                "mean": 0.006184998272452503,
+                "stddev": 0.0002304361818324972,
+                "rounds": 10,
+                "median": 0.006148273879662156,
+                "iqr": 0.000308370559941977,
+                "q1": 0.006024094638414681,
+                "q3": 0.006332465198356658,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.005863916880916804,
+                "hd15iqr": 0.006541689939331264,
+                "ops": 161.68153262934956,
+                "total": 0.06184998272452503,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-1024]",
+            "params": {
+                "client": "partition_aware",
+                "size": 1024
+            },
+            "param": "partition_aware-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003795946715399623,
+                "max": 0.00048607352888211606,
+                "mean": 0.00040109895612113177,
+                "stddev": 3.103723188099204e-05,
+                "rounds": 10,
+                "median": 0.0003905167256016284,
+                "iqr": 1.7696288414299484e-05,
+                "q1": 0.0003859502007253468,
+                "q3": 0.0004036464891396463,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0003795946715399623,
+                "hd15iqr": 0.00048607352888211606,
+                "ops": 2493.150342924354,
+                "total": 0.004010989561211317,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-4096]",
+            "params": {
+                "client": "partition_aware",
+                "size": 4096
+            },
+            "param": "partition_aware-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0003775075497105718,
+                "max": 0.00041266351006925107,
+                "mean": 0.0003931006332859397,
+                "stddev": 1.1067399218372177e-05,
+                "rounds": 10,
+                "median": 0.0003930725553072989,
+                "iqr": 1.5089509543031443e-05,
+                "q1": 0.0003844700008630753,
+                "q3": 0.0003995595104061067,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0003775075497105718,
+                "hd15iqr": 0.00041266351006925107,
+                "ops": 2543.877865677729,
+                "total": 0.003931006332859397,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-10240]",
+            "params": {
+                "client": "partition_aware",
+                "size": 10240
+            },
+            "param": "partition_aware-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0004021986504085362,
+                "max": 0.0005435670097358524,
+                "mean": 0.00043075069529004394,
+                "stddev": 4.172180235665467e-05,
+                "rounds": 10,
+                "median": 0.00041976994019933046,
+                "iqr": 2.993970178067685e-05,
+                "q1": 0.0004068587184883654,
+                "q3": 0.00043679842026904224,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0004021986504085362,
+                "hd15iqr": 0.0005435670097358524,
+                "ops": 2321.528463991578,
+                "total": 0.004307506952900439,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-102400]",
+            "params": {
+                "client": "partition_aware",
+                "size": 102400
+            },
+            "param": "partition_aware-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006003459822386503,
+                "max": 0.0006892077904194593,
+                "mean": 0.0006299326862208545,
+                "stddev": 2.5953434090309234e-05,
+                "rounds": 10,
+                "median": 0.0006194671802222729,
+                "iqr": 2.2515552118420614e-05,
+                "q1": 0.000614864188246429,
+                "q3": 0.0006373797403648496,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.0006003459822386503,
+                "hd15iqr": 0.0006892077904194593,
+                "ops": 1587.4712042635613,
+                "total": 0.006299326862208545,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-512000]",
+            "params": {
+                "client": "partition_aware",
+                "size": 512000
+            },
+            "param": "partition_aware-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0013344395300373434,
+                "max": 0.0014857766591012478,
+                "mean": 0.00138148848596029,
+                "stddev": 4.732947231049193e-05,
+                "rounds": 10,
+                "median": 0.00136691486928612,
+                "iqr": 4.201962146908032e-05,
+                "q1": 0.0013518733391538263,
+                "q3": 0.0013938929606229066,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0013344395300373434,
+                "hd15iqr": 0.0014857766591012478,
+                "ops": 723.8569196650867,
+                "total": 0.0138148848596029,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_sync_binary_get[partition_aware-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_sync_binary_get[partition_aware-1048576]",
+            "params": {
+                "client": "partition_aware",
+                "size": 1048576
+            },
+            "param": "partition_aware-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0037474145321175455,
+                "max": 0.004099189799744636,
+                "mean": 0.003931263326201587,
+                "stddev": 0.00010184601628362641,
+                "rounds": 10,
+                "median": 0.003918088270584121,
+                "iqr": 9.980501141399097e-05,
+                "q1": 0.0038914045388810338,
+                "q3": 0.003991209550295025,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0037474145321175455,
+                "hd15iqr": 0.004099189799744636,
+                "ops": 254.37115680729696,
+                "total": 0.03931263326201588,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-1024]",
+            "params": {
+                "aio_client": "simple",
+                "size": 1024
+            },
+            "param": "simple-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006254523014649749,
+                "max": 0.0008148437412455678,
+                "mean": 0.0006744387017097324,
+                "stddev": 6.266560847029548e-05,
+                "rounds": 10,
+                "median": 0.0006481283088214696,
+                "iqr": 4.325211979448794e-05,
+                "q1": 0.0006368577596731484,
+                "q3": 0.0006801098794676363,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0006254523014649749,
+                "hd15iqr": 0.0007604568381793797,
+                "ops": 1482.7144371533768,
+                "total": 0.006744387017097324,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-4096]",
+            "params": {
+                "aio_client": "simple",
+                "size": 4096
+            },
+            "param": "simple-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006428715982474387,
+                "max": 0.0008174377493560314,
+                "mean": 0.000683858857722953,
+                "stddev": 4.855146864112913e-05,
+                "rounds": 10,
+                "median": 0.0006752087047789246,
+                "iqr": 1.4736619777977532e-05,
+                "q1": 0.0006662011402659118,
+                "q3": 0.0006809377600438893,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.000653566550463438,
+                "hd15iqr": 0.0008174377493560314,
+                "ops": 1462.2900452436973,
+                "total": 0.006838588577229529,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-10240]",
+            "params": {
+                "aio_client": "simple",
+                "size": 10240
+            },
+            "param": "simple-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006764734699390829,
+                "max": 0.0008718653698451817,
+                "mean": 0.0007482297637034208,
+                "stddev": 7.497438754099665e-05,
+                "rounds": 10,
+                "median": 0.0007234356843400747,
+                "iqr": 0.0001392104080878198,
+                "q1": 0.0006897394498810172,
+                "q3": 0.000828949857968837,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0006764734699390829,
+                "hd15iqr": 0.0008718653698451817,
+                "ops": 1336.4878657732395,
+                "total": 0.007482297637034207,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-102400]",
+            "params": {
+                "aio_client": "simple",
+                "size": 102400
+            },
+            "param": "simple-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.001113523889798671,
+                "max": 0.0012741201696917415,
+                "mean": 0.0011528049660846592,
+                "stddev": 4.560928105292233e-05,
+                "rounds": 10,
+                "median": 0.0011404029338154941,
+                "iqr": 2.9482950922101857e-05,
+                "q1": 0.00113358672009781,
+                "q3": 0.0011630696710199118,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.001113523889798671,
+                "hd15iqr": 0.0012741201696917415,
+                "ops": 867.449420691134,
+                "total": 0.011528049660846591,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-512000]",
+            "params": {
+                "aio_client": "simple",
+                "size": 512000
+            },
+            "param": "simple-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0029658595588989557,
+                "max": 0.003435009089298546,
+                "mean": 0.003134419657057151,
+                "stddev": 0.0001288088959476592,
+                "rounds": 10,
+                "median": 0.003098628545412794,
+                "iqr": 0.0001051112404093146,
+                "q1": 0.0030765711702406408,
+                "q3": 0.0031816824106499554,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0029658595588989557,
+                "hd15iqr": 0.003435009089298546,
+                "ops": 319.03832588227243,
+                "total": 0.03134419657057151,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[simple-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[simple-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "size": 1048576
+            },
+            "param": "simple-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.006625708919018507,
+                "max": 0.007497579979244619,
+                "mean": 0.007182247721822932,
+                "stddev": 0.00026655045196375543,
+                "rounds": 10,
+                "median": 0.007182716130046174,
+                "iqr": 0.0004206281132064756,
+                "q1": 0.007033980728592724,
+                "q3": 0.0074546088417991995,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.006625708919018507,
+                "hd15iqr": 0.007497579979244619,
+                "ops": 139.23217894052104,
+                "total": 0.07182247721822932,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 1024
+            },
+            "param": "partition_aware-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0005734223988838494,
+                "max": 0.0007266842294484377,
+                "mean": 0.0006053385657723993,
+                "stddev": 4.584858158930666e-05,
+                "rounds": 10,
+                "median": 0.0005913592339493335,
+                "iqr": 2.133129863068461e-05,
+                "q1": 0.0005810146010480821,
+                "q3": 0.0006023458996787667,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0005734223988838494,
+                "hd15iqr": 0.0007266842294484377,
+                "ops": 1651.9680994123034,
+                "total": 0.006053385657723992,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 4096
+            },
+            "param": "partition_aware-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0005994992796331644,
+                "max": 0.00083995166933164,
+                "mean": 0.0006450767458882183,
+                "stddev": 7.8847444542398e-05,
+                "rounds": 10,
+                "median": 0.0006121348403394223,
+                "iqr": 1.8695748876780246e-05,
+                "q1": 0.0006050319410860538,
+                "q3": 0.0006237276899628341,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0005994992796331644,
+                "hd15iqr": 0.000731919149402529,
+                "ops": 1550.203144624414,
+                "total": 0.006450767458882183,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 10240
+            },
+            "param": "partition_aware-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0006231112685054541,
+                "max": 0.0007507459307089448,
+                "mean": 0.0006465962755028158,
+                "stddev": 3.810456380174501e-05,
+                "rounds": 10,
+                "median": 0.0006368429563008249,
+                "iqr": 2.405771985650065e-05,
+                "q1": 0.000624205800704658,
+                "q3": 0.0006482635205611587,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0006231112685054541,
+                "hd15iqr": 0.0007507459307089448,
+                "ops": 1546.5600992247678,
+                "total": 0.006465962755028158,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 102400
+            },
+            "param": "partition_aware-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008335736393928528,
+                "max": 0.000984976370818913,
+                "mean": 0.0008895293483510613,
+                "stddev": 5.660765959834144e-05,
+                "rounds": 10,
+                "median": 0.0008642419904936105,
+                "iqr": 8.852266008034352e-05,
+                "q1": 0.0008537969901226461,
+                "q3": 0.0009423196502029896,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0008335736393928528,
+                "hd15iqr": 0.000984976370818913,
+                "ops": 1124.1900021103522,
+                "total": 0.008895293483510614,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 512000
+            },
+            "param": "partition_aware-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017015211982652546,
+                "max": 0.0021016766200773417,
+                "mean": 0.0018279605431016535,
+                "stddev": 0.00012155827858019467,
+                "rounds": 10,
+                "median": 0.0018042979610618202,
+                "iqr": 0.00017111171968281274,
+                "q1": 0.001734079250600189,
+                "q3": 0.0019051909702830017,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0017015211982652546,
+                "hd15iqr": 0.0021016766200773417,
+                "ops": 547.0577599575626,
+                "total": 0.018279605431016536,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get[partition_aware-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get[partition_aware-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "size": 1048576
+            },
+            "param": "partition_aware-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0043413382396101955,
+                "max": 0.00525420923018828,
+                "mean": 0.004575674282154068,
+                "stddev": 0.0002705911099258873,
+                "rounds": 10,
+                "median": 0.004503850570181385,
+                "iqr": 0.00016041775001213003,
+                "q1": 0.0044193488103337585,
+                "q3": 0.0045797665603458885,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0043413382396101955,
+                "hd15iqr": 0.00525420923018828,
+                "ops": 218.54702462108705,
+                "total": 0.045756742821540686,
+                "iterations": 100
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 1024
+            },
+            "param": "simple-5-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0022699250490404665,
+                "max": 0.0028629897977225484,
+                "mean": 0.0023973999777808785,
+                "stddev": 0.00017110194653735175,
+                "rounds": 10,
+                "median": 0.0023533727799076587,
+                "iqr": 8.582136360928399e-05,
+                "q1": 0.0023254778934642673,
+                "q3": 0.0024112992570735512,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.0022699250490404665,
+                "hd15iqr": 0.0028629897977225484,
+                "ops": 417.11854895637265,
+                "total": 0.023973999777808782,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 4096
+            },
+            "param": "simple-5-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002314746705815196,
+                "max": 0.0031493484042584897,
+                "mean": 0.002471536751836538,
+                "stddev": 0.0002421702496426953,
+                "rounds": 10,
+                "median": 0.0024090582795906813,
+                "iqr": 7.444779621437183e-05,
+                "q1": 0.002367173496168107,
+                "q3": 0.0024416212923824786,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.002314746705815196,
+                "hd15iqr": 0.0031493484042584897,
+                "ops": 404.60656684830786,
+                "total": 0.024715367518365384,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 10240
+            },
+            "param": "simple-5-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0024719980428926647,
+                "max": 0.0032340637990273535,
+                "mean": 0.002729916140669957,
+                "stddev": 0.00021937003354904961,
+                "rounds": 10,
+                "median": 0.0026560343510936947,
+                "iqr": 0.000249165657442063,
+                "q1": 0.002616766549181193,
+                "q3": 0.002865932206623256,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.0024719980428926647,
+                "hd15iqr": 0.0032340637990273535,
+                "ops": 366.3116185519849,
+                "total": 0.02729916140669957,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 102400
+            },
+            "param": "simple-5-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0045508714043535296,
+                "max": 0.005440371343865991,
+                "mean": 0.004905696723144502,
+                "stddev": 0.0003547910286928319,
+                "rounds": 10,
+                "median": 0.004718248825520277,
+                "iqr": 0.0005684182513505222,
+                "q1": 0.004617908445652574,
+                "q3": 0.0051863266970030965,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0045508714043535296,
+                "hd15iqr": 0.005440371343865991,
+                "ops": 203.84464357164953,
+                "total": 0.049056967231445016,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 512000
+            },
+            "param": "simple-5-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.012948905595112591,
+                "max": 0.015104870800860227,
+                "mean": 0.013920957621885463,
+                "stddev": 0.0007106305293580076,
+                "rounds": 10,
+                "median": 0.013901835877913982,
+                "iqr": 0.001292779797222466,
+                "q1": 0.013221445155795663,
+                "q3": 0.014514224953018129,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.012948905595112591,
+                "hd15iqr": 0.015104870800860227,
+                "ops": 71.8341386534987,
+                "total": 0.13920957621885466,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-5-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-5-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 5,
+                "size": 1048576
+            },
+            "param": "simple-5-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.028191003447864203,
+                "max": 0.032440978148952124,
+                "mean": 0.030296973488293587,
+                "stddev": 0.0015079405901825091,
+                "rounds": 10,
+                "median": 0.030527090275427327,
+                "iqr": 0.002737067046109591,
+                "q1": 0.029105887247715144,
+                "q3": 0.031842954293824735,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.028191003447864203,
+                "hd15iqr": 0.032440978148952124,
+                "ops": 33.00659718986085,
+                "total": 0.30296973488293594,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 1024
+            },
+            "param": "simple-10-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00434984709136188,
+                "max": 0.004955737804993987,
+                "mean": 0.0045619256910867986,
+                "stddev": 0.0001669462159996156,
+                "rounds": 10,
+                "median": 0.004539919644594192,
+                "iqr": 0.00015805037692189286,
+                "q1": 0.0044691326096653935,
+                "q3": 0.004627182986587286,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.00434984709136188,
+                "hd15iqr": 0.004955737804993987,
+                "ops": 219.20567490913416,
+                "total": 0.04561925691086799,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 4096
+            },
+            "param": "simple-10-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004542248998768627,
+                "max": 0.006583760492503643,
+                "mean": 0.005027721570804715,
+                "stddev": 0.000594873395597131,
+                "rounds": 10,
+                "median": 0.004817314445972443,
+                "iqr": 0.00021012001670896955,
+                "q1": 0.0047397030983120205,
+                "q3": 0.00494982311502099,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.004542248998768627,
+                "hd15iqr": 0.005434500495903194,
+                "ops": 198.89725115385505,
+                "total": 0.05027721570804715,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 10240
+            },
+            "param": "simple-10-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004860191280022264,
+                "max": 0.006220511486753821,
+                "mean": 0.005147713818587363,
+                "stddev": 0.0004798988945092621,
+                "rounds": 10,
+                "median": 0.004922039050143212,
+                "iqr": 0.00016790721565485,
+                "q1": 0.00489676829893142,
+                "q3": 0.00506467551458627,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.004860191280022264,
+                "hd15iqr": 0.0058529282920062545,
+                "ops": 194.26099337325252,
+                "total": 0.05147713818587362,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 102400
+            },
+            "param": "simple-10-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009286600397899747,
+                "max": 0.010661770892329513,
+                "mean": 0.009722395217977464,
+                "stddev": 0.00043491232641377337,
+                "rounds": 10,
+                "median": 0.009602647949941456,
+                "iqr": 0.0004706941079348336,
+                "q1": 0.009370066202245652,
+                "q3": 0.009840760310180486,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.009286600397899747,
+                "hd15iqr": 0.010661770892329513,
+                "ops": 102.85531266522908,
+                "total": 0.09722395217977463,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 512000
+            },
+            "param": "simple-10-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.02614855959545821,
+                "max": 0.029984719585627317,
+                "mean": 0.02829237887635827,
+                "stddev": 0.0011530012076813474,
+                "rounds": 10,
+                "median": 0.028321964642964305,
+                "iqr": 0.0016500352881848798,
+                "q1": 0.027497835899703206,
+                "q3": 0.029147871187888086,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.02614855959545821,
+                "hd15iqr": 0.029984719585627317,
+                "ops": 35.34520742741862,
+                "total": 0.2829237887635827,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-10-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-10-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 10,
+                "size": 1048576
+            },
+            "param": "simple-10-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.05758523130789399,
+                "max": 0.06744654381182044,
+                "mean": 0.06141822105972096,
+                "stddev": 0.0027236932475011373,
+                "rounds": 10,
+                "median": 0.06102375469636172,
+                "iqr": 0.0025042452849447713,
+                "q1": 0.05996708341408521,
+                "q3": 0.06247132869902998,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.05758523130789399,
+                "hd15iqr": 0.06744654381182044,
+                "ops": 16.281813161400986,
+                "total": 0.6141822105972097,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-1024]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 1024
+            },
+            "param": "simple-20-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.008468586998060346,
+                "max": 0.012283430388197302,
+                "mean": 0.00933180219028145,
+                "stddev": 0.0013376547528662166,
+                "rounds": 10,
+                "median": 0.008820265508256852,
+                "iqr": 0.00036402414552867343,
+                "q1": 0.008554979832842946,
+                "q3": 0.00891900397837162,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.008468586998060346,
+                "hd15iqr": 0.011348918220028282,
+                "ops": 107.16043692411782,
+                "total": 0.09331802190281452,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-4096]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 4096
+            },
+            "param": "simple-20-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009223555400967597,
+                "max": 0.012388928979635238,
+                "mean": 0.009877350917086004,
+                "stddev": 0.0010680199509355687,
+                "rounds": 10,
+                "median": 0.00943702191580087,
+                "iqr": 0.0002283354289829738,
+                "q1": 0.009320451179519296,
+                "q3": 0.00954878660850227,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.009223555400967597,
+                "hd15iqr": 0.011273439601063728,
+                "ops": 101.24172041616781,
+                "total": 0.09877350917086004,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-10240]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 10240
+            },
+            "param": "simple-20-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00948028420098126,
+                "max": 0.013563851825892925,
+                "mean": 0.010470843482762575,
+                "stddev": 0.0012377649901139682,
+                "rounds": 10,
+                "median": 0.010064050485379995,
+                "iqr": 0.0010563562158495184,
+                "q1": 0.00969343758188188,
+                "q3": 0.010749793797731399,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.00948028420098126,
+                "hd15iqr": 0.013563851825892925,
+                "ops": 95.50328983966104,
+                "total": 0.10470843482762575,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-102400]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 102400
+            },
+            "param": "simple-20-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.01663294518366456,
+                "max": 0.02040284499526024,
+                "mean": 0.018448546351864933,
+                "stddev": 0.0012988595110752699,
+                "rounds": 10,
+                "median": 0.018050947017036377,
+                "iqr": 0.0016888673882931478,
+                "q1": 0.01770828878507018,
+                "q3": 0.01939715617336333,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.01663294518366456,
+                "hd15iqr": 0.02040284499526024,
+                "ops": 54.20481272221817,
+                "total": 0.18448546351864933,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-512000]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 512000
+            },
+            "param": "simple-20-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.05069149499759078,
+                "max": 0.06175647960044443,
+                "mean": 0.053856857819482684,
+                "stddev": 0.003277553641515244,
+                "rounds": 10,
+                "median": 0.05335384500212967,
+                "iqr": 0.003518617199733849,
+                "q1": 0.05106131681241095,
+                "q3": 0.0545799340121448,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.05069149499759078,
+                "hd15iqr": 0.06175647960044443,
+                "ops": 18.567737526608,
+                "total": 0.5385685781948268,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[simple-20-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[simple-20-1048576]",
+            "params": {
+                "aio_client": "simple",
+                "batch": 20,
+                "size": 1048576
+            },
+            "param": "simple-20-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.11322187716141344,
+                "max": 0.15691714342683555,
+                "mean": 0.12025919819716364,
+                "stddev": 0.01335410492445835,
+                "rounds": 10,
+                "median": 0.11544183560181409,
+                "iqr": 0.004278899030759939,
+                "q1": 0.11379361017607152,
+                "q3": 0.11807250920683146,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.11322187716141344,
+                "hd15iqr": 0.12503341343253851,
+                "ops": 8.31537225419141,
+                "total": 1.2025919819716364,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 1024
+            },
+            "param": "partition_aware-5-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017200035508722067,
+                "max": 0.0018118394073098898,
+                "mean": 0.0017809729068540036,
+                "stddev": 3.029365539452442e-05,
+                "rounds": 10,
+                "median": 0.001791329449042678,
+                "iqr": 5.054704379290329e-05,
+                "q1": 0.0017543134046718479,
+                "q3": 0.0018048604484647512,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0017200035508722067,
+                "hd15iqr": 0.0018118394073098898,
+                "ops": 561.4908548869776,
+                "total": 0.017809729068540038,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 4096
+            },
+            "param": "partition_aware-5-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017908886540681124,
+                "max": 0.002828694449272007,
+                "mean": 0.0019883844431024043,
+                "stddev": 0.00034535809270799794,
+                "rounds": 10,
+                "median": 0.0018319140013772993,
+                "iqr": 0.00012035554973408588,
+                "q1": 0.0018033407046459614,
+                "q3": 0.0019236962543800473,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0017908886540681124,
+                "hd15iqr": 0.002390626457054168,
+                "ops": 502.9208528908705,
+                "total": 0.019883844431024048,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 10240
+            },
+            "param": "partition_aware-5-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.001868488104082644,
+                "max": 0.002934985747560859,
+                "mean": 0.002051648134365678,
+                "stddev": 0.0003487802087440168,
+                "rounds": 10,
+                "median": 0.0019030401250347494,
+                "iqr": 5.339204799383892e-05,
+                "q1": 0.0018853234010748564,
+                "q3": 0.0019387154490686954,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.001868488104082644,
+                "hd15iqr": 0.0023999539553187788,
+                "ops": 487.4130135912301,
+                "total": 0.02051648134365678,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 102400
+            },
+            "param": "partition_aware-5-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.002689992357045412,
+                "max": 0.0032680927542969584,
+                "mean": 0.0028293189255055038,
+                "stddev": 0.0001647779292171196,
+                "rounds": 10,
+                "median": 0.0027991544746328147,
+                "iqr": 0.00012644580565392962,
+                "q1": 0.0027232576976530254,
+                "q3": 0.002849703503306955,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.002689992357045412,
+                "hd15iqr": 0.0032680927542969584,
+                "ops": 353.4419506352872,
+                "total": 0.028293189255055036,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 512000
+            },
+            "param": "partition_aware-5-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007781439297832549,
+                "max": 0.008782651752699166,
+                "mean": 0.008045989455422387,
+                "stddev": 0.00031085400881760507,
+                "rounds": 10,
+                "median": 0.007901505072368309,
+                "iqr": 0.00033928914926946094,
+                "q1": 0.007847513002343477,
+                "q3": 0.008186802151612937,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.007781439297832549,
+                "hd15iqr": 0.008782651752699166,
+                "ops": 124.28552206541556,
+                "total": 0.08045989455422387,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-5-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-5-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 5,
+                "size": 1048576
+            },
+            "param": "partition_aware-5-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.016421874903608115,
+                "max": 0.018667993892449886,
+                "mean": 0.017298376356484367,
+                "stddev": 0.0008307552967941622,
+                "rounds": 10,
+                "median": 0.016997852973872796,
+                "iqr": 0.0013267770991660655,
+                "q1": 0.016597302653826772,
+                "q3": 0.017924079752992837,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.016421874903608115,
+                "hd15iqr": 0.018667993892449886,
+                "ops": 57.80889370146844,
+                "total": 0.1729837635648437,
+                "iterations": 20
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 1024
+            },
+            "param": "partition_aware-10-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003119524591602385,
+                "max": 0.0044096040073782206,
+                "mean": 0.0032785693020559847,
+                "stddev": 0.0003977693837022405,
+                "rounds": 10,
+                "median": 0.003159099246840924,
+                "iqr": 2.566680777817956e-05,
+                "q1": 0.0031453042989596724,
+                "q3": 0.003170971106737852,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.003119524591602385,
+                "hd15iqr": 0.0044096040073782206,
+                "ops": 305.0110910795455,
+                "total": 0.03278569302055985,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 4096
+            },
+            "param": "partition_aware-10-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0033619520952925088,
+                "max": 0.004368918994441628,
+                "mean": 0.0035483393585309386,
+                "stddev": 0.0003430027236391241,
+                "rounds": 10,
+                "median": 0.003393730951938778,
+                "iqr": 7.591568864882001e-05,
+                "q1": 0.003371081012301147,
+                "q3": 0.003446996700949967,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0033619520952925088,
+                "hd15iqr": 0.003977904794737697,
+                "ops": 281.8219733114855,
+                "total": 0.03548339358530939,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 10240
+            },
+            "param": "partition_aware-10-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0034341796999797225,
+                "max": 0.004465282405726611,
+                "mean": 0.0036478893598541617,
+                "stddev": 0.00031991876593096506,
+                "rounds": 10,
+                "median": 0.0035281760501675308,
+                "iqr": 4.981097299605608e-05,
+                "q1": 0.0034996319096535443,
+                "q3": 0.0035494428826496004,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.0034341796999797225,
+                "hd15iqr": 0.003942841803655029,
+                "ops": 274.131121136848,
+                "total": 0.03647889359854162,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 102400
+            },
+            "param": "partition_aware-10-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.004720480204559863,
+                "max": 0.007017910503782332,
+                "mean": 0.005166451665572822,
+                "stddev": 0.0006993413935815061,
+                "rounds": 10,
+                "median": 0.00492946965387091,
+                "iqr": 0.0001560328761115665,
+                "q1": 0.004857325716875494,
+                "q3": 0.00501335859298706,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.004720480204559863,
+                "hd15iqr": 0.005639189505018294,
+                "ops": 193.55644158322477,
+                "total": 0.05166451665572821,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 512000
+            },
+            "param": "partition_aware-10-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.015000415593385696,
+                "max": 0.016656442498788237,
+                "mean": 0.01580646058777347,
+                "stddev": 0.0005117394830413772,
+                "rounds": 10,
+                "median": 0.015824063250329347,
+                "iqr": 0.0005855008261278251,
+                "q1": 0.015458450582809747,
+                "q3": 0.016043951408937572,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.015000415593385696,
+                "hd15iqr": 0.016656442498788237,
+                "ops": 63.265270200560565,
+                "total": 0.15806460587773472,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-10-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-10-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 10,
+                "size": 1048576
+            },
+            "param": "partition_aware-10-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.029744108999148013,
+                "max": 0.033492793887853624,
+                "mean": 0.03080773293739185,
+                "stddev": 0.001240399367521539,
+                "rounds": 10,
+                "median": 0.030222949746530503,
+                "iqr": 0.001345183909870682,
+                "q1": 0.029852165887132288,
+                "q3": 0.03119734979700297,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.029744108999148013,
+                "hd15iqr": 0.033492793887853624,
+                "ops": 32.45938290987597,
+                "total": 0.30807732937391846,
+                "iterations": 10
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-1024]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-1024]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 1024
+            },
+            "param": "partition_aware-20-1024",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00604309537447989,
+                "max": 0.010114506212994456,
+                "mean": 0.0067420477233827115,
+                "stddev": 0.0013362213015337217,
+                "rounds": 10,
+                "median": 0.00619942182675004,
+                "iqr": 0.00023655002005398308,
+                "q1": 0.006069157784804702,
+                "q3": 0.006305707804858685,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.00604309537447989,
+                "hd15iqr": 0.008094073832035064,
+                "ops": 148.32288957727317,
+                "total": 0.06742047723382712,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-4096]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-4096]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 4096
+            },
+            "param": "partition_aware-20-4096",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.006303862389177084,
+                "max": 0.0075101961847394705,
+                "mean": 0.006522771618328989,
+                "stddev": 0.00035582477403763935,
+                "rounds": 10,
+                "median": 0.006410584109835327,
+                "iqr": 0.00015434962697327085,
+                "q1": 0.006356313778087497,
+                "q3": 0.006510663405060768,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.006303862389177084,
+                "hd15iqr": 0.0075101961847394705,
+                "ops": 153.3090622382056,
+                "total": 0.06522771618328989,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-10240]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-10240]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 10240
+            },
+            "param": "partition_aware-20-10240",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.006413557985797525,
+                "max": 0.007718121772632003,
+                "mean": 0.006778587317094207,
+                "stddev": 0.0003902849711458812,
+                "rounds": 10,
+                "median": 0.0067135808290913705,
+                "iqr": 0.00039919679984450323,
+                "q1": 0.00650188559666276,
+                "q3": 0.006901082396507263,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.006413557985797525,
+                "hd15iqr": 0.007718121772632003,
+                "ops": 147.52336338254509,
+                "total": 0.06778587317094206,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-102400]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-102400]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 102400
+            },
+            "param": "partition_aware-20-102400",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009206028981134295,
+                "max": 0.015597768779844045,
+                "mean": 0.010060885837301612,
+                "stddev": 0.0019531369827776248,
+                "rounds": 10,
+                "median": 0.009429506887681783,
+                "iqr": 0.0003622354008257396,
+                "q1": 0.009332781611010432,
+                "q3": 0.009695017011836171,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.009206028981134295,
+                "hd15iqr": 0.015597768779844045,
+                "ops": 99.3948262778624,
+                "total": 0.10060885837301613,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-512000]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-512000]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 512000
+            },
+            "param": "partition_aware-20-512000",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.025883432198315858,
+                "max": 0.033890175400301814,
+                "mean": 0.029316845121793448,
+                "stddev": 0.002444542249059828,
+                "rounds": 10,
+                "median": 0.029026089888066056,
+                "iqr": 0.0030215458478778587,
+                "q1": 0.02763111237436533,
+                "q3": 0.03065265822224319,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.025883432198315858,
+                "hd15iqr": 0.033890175400301814,
+                "ops": 34.11008230406837,
+                "total": 0.2931684512179345,
+                "iterations": 5
+            }
+        },
+        {
+            "group": "binary_object_get",
+            "name": "benchmark_async_binary_get_batch[partition_aware-20-1048576]",
+            "fullname": "benchmark/binary_benchmark.py::benchmark_async_binary_get_batch[partition_aware-20-1048576]",
+            "params": {
+                "aio_client": "partition_aware",
+                "batch": 20,
+                "size": 1048576
+            },
+            "param": "partition_aware-20-1048576",
+            "extra_info": {},
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.05420172521844506,
+                "max": 0.059675805177539586,
+                "mean": 0.056363242603838445,
+                "stddev": 0.0017915994015208555,
+                "rounds": 10,
+                "median": 0.0557890514144674,
+                "iqr": 0.002867142995819451,
+                "q1": 0.05492033981718123,
+                "q3": 0.05778748281300068,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.05420172521844506,
+                "hd15iqr": 0.059675805177539586,
+                "ops": 17.74205943097919,
+                "total": 0.5636324260383845,
+                "iterations": 5
+            }
+        }
+    ],
+    "datetime": "2021-04-13T04:41:01.727495",
+    "version": "3.2.3"
+}
