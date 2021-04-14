@@ -20,7 +20,7 @@
 ** Сильно быстрее встроенного event loop
 ** Использование бесшовное
 ** Вы скорее всего и так его используете:
-*** https://www.uvicorn.org[uvunicorn]
+*** https://www.uvicorn.org[uvicorn]
 *** https://sanicframework.org/en/guide[sanic framework]
 
 [%conceal]
