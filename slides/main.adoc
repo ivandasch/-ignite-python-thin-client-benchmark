@@ -34,11 +34,12 @@
 * Поддержка cluster api (пока только активация-деактивация)
 
 == Немного о тестовом стенде
-* Apache Ignite
+* `16 x Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, 32Gb`
+* `Ubuntu 18.04.3 x86_64`
+* `OpenJDK 1.8.0u282`, `Apache Ignite 2.10.0`, `python 3.8.9`, `uvloop 0.15.2`
 ** 4 узла, без бэкапов
 ** `-Xmx8G -Xms8G -XX:+UseG1GC`
-** Размер off-heap `18Gb`, in-memory
-** `16 x Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, 32Gb`
+** Dataregion -- 18Gb, in-memory
 
 == Оптимизации
 include::parts/optimizations.adoc[]
