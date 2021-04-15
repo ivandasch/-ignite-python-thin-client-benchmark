@@ -1,3 +1,4 @@
+[%conceal]
 === Бенчмарки. Put bytearray.
 [source, python]
 ----
@@ -28,6 +29,7 @@ def benchmark_sync_bytearray_put(benchmark, cache, size):
 [.text-center]
 image::put_bytearray.png[width=50%]
 
+[%conceal]
 === Бенчмарки. Get bytearray.
 [source, python]
 ----
@@ -55,6 +57,7 @@ def benchmark_sync_bytearray_get(benchmark, cache, size):
 [.text-center]
 image::get_bytearray.png[width=50%]
 
+[%conceal]
 === Бенчмарки. Put BinaryObject.
 [source, python]
 ----
@@ -91,7 +94,8 @@ def benchmark_sync_binary_put(benchmark, cache, size):
 [.text-center]
 image::put_binary_object.png[width=50%]
 
-=== Бенчмарки. Put BinaryObject.
+[%conceal]
+=== Бенчмарки. Get BinaryObject.
 [source, python]
 ----
 data_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024]
