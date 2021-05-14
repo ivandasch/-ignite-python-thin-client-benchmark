@@ -1,0 +1,44 @@
+[%conceal]
+=== Пример
+[source, python]
+----
+class Student(
+    metaclass=GenericObjectMeta,
+    type_name='SQL_PUBLIC_STUDENT_TYPE',
+    schema={
+        'name': String,
+        'login': String,
+        'age': IntObject,
+        'gpa': DoubleObject,
+    }
+):
+    pass
+----
+
+[%conceal]
+=== Пример-2
+[source, python]
+----
+SQL_CONFIG = {
+    PROP_NAME: 'SQL_PUBLIC_STUDENT',
+    PROP_SQL_SCHEMA: 'PUBLIC',
+    PROP_QUERY_ENTITIES: [
+    ...]
+}
+
+client = Client(partition_aware=True)
+with client.connect([('127.0.0.1', 10800 + i) for i in range(3)]):
+    # client.get_cluster().set_state(ClusterState.ACTIVE)
+    student_cache = client.get_or_create_cache(SQL_CONFIG)
+    student_cache.put_all({i: Student(login='jdoe', name='John Doe', age=17, gpa=4.25) for i in range(10)})
+    print(student_cache.get(1))
+    print(student_cache.get_all([1, 2, 3]))
+
+    with client.sql(r'SELECT * FROM Student', include_field_names=True) as cursor:
+        for row in cursor:
+            print(row)
+
+    with student_cache.scan() as cursor:
+        for row in cursor:
+            print(row)
+----

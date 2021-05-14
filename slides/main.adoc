@@ -20,10 +20,10 @@
 |===
 .^|image::me.jpg[]
 .^|
-* Apache Ignite committer
-* Senior software engineer @ SberTech.
+* Коммитер проекта Apache Ignite
 * ivandasch@apache.org
 * icon:github[] https://github.com/ivandasch[ivandasch]
+* icon:telegram[] https://t.me/ivandasch[ivandasch]
 |===
 
 == Что нового в новой версии
@@ -32,6 +32,9 @@
 * Поддержка Partition Awareness
 * Asyncio версия
 * Поддержка cluster api (пока только активация-деактивация)
+
+== Примеры
+include::parts/sync_examples.adoc[]
 
 == Немного о тестовом стенде
 * `16 x Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, 32Gb`
@@ -47,21 +50,16 @@ include::parts/optimizations.adoc[]
 == Partition awareness
 include::parts/partition_aware.adoc[]
 
-== Немного сахарку.
-include::parts/sync_api_goodies.adoc[]
-
 == Asyncio
 include::parts/asyncio.adoc[]
 
-== Немного сахарку со вкусом асинхронщины
-include::parts/async_api_goodies.adoc[]
-
 == Планы
-* Expiry policy и transactions
+* Expiry policy (TTL) (Уже в master)
+* transactions
 * Connection pools в asyncio версии.
 * Дальнейшие оптимизации в serialization/deserialization (больше кода на С!)
 
 == Ссылки
 * icon:github[] https://github.com/apache/ignite-python-thin-client
-* https://apache-ignite-binary-protocol-client.readthedocs.io/en/latest/readme.html[Документация на readthedocs.io]
-* `pip install pyignite==0.4.0` (soon!)
+* https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html[Документация на readthedocs.io]
+* `pip install pyignite==0.4.0`

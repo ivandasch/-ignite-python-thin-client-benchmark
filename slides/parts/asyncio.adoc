@@ -27,11 +27,21 @@
 === Example
 [source, python]
 ----
-import asyncio
-import uvloop
+async def main_async():
+    client = AioClient(partition_aware=True)
+    async with client.connect([('127.0.0.1', 10800 + i) for i in range(3)]):
+        student_cache = await client.get_or_create_cache(SQL_CONFIG)
+        await student_cache.put_all({i: Student(login='jdoe', name='John Doe', age=17, gpa=4.25) for i in range(10)})
+        print(await student_cache.get(1))
+        print(await student_cache.get_all([1, 2, 3]))
 
-async def main():
-    ...
+        async with client.sql(r'SELECT * FROM Student ORDER BY SID', include_field_names=True) as cursor:
+            async for row in cursor:
+                print(row)
+
+        async with student_cache.scan() as cursor:
+            async for row in cursor:
+                print(row)
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 loop = asyncio.get_event_loop()
