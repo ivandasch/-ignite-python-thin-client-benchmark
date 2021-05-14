@@ -403,8 +403,40 @@ TeX: { equationNumbers: { autoNumber: "none" } }
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><link rel="stylesheet" href="style.css"></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Apache Ignite Python thin client. Новая версия.</h1><p class="author"><small>Дащинский Иван</small></p></section><section id="_кто_я_такой"><div class="slide-content"><table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:30%"><col style="width:70%"></colgroup><tbody><tr><td class="tableblock halign-left valign-middle"><div><div class="imageblock"><img src="images/me.jpg" alt="me"></div></div></td><td class="tableblock halign-left valign-middle"><div><div class="ulist"><ul><li><p>Apache Ignite committer</p></li><li><p>Senior software engineer @ SberTech.</p></li><li><p><a href="mailto:ivandasch@apache.org">ivandasch@apache.org</a></p></li><li><p><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/ivandasch">ivandasch</a></p></li></ul></div></div></td></tr></table></div></section>
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><link rel="stylesheet" href="style.css"></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Apache Ignite Python thin client. Новая версия.</h1><p class="author"><small>Дащинский Иван</small></p></section><section id="_кто_я_такой"><div class="slide-content"><table class="tableblock frame-all grid-all" style="width:100%"><colgroup><col style="width:30%"><col style="width:70%"></colgroup><tbody><tr><td class="tableblock halign-left valign-middle"><div><div class="imageblock"><img src="images/me.jpg" alt="me"></div></div></td><td class="tableblock halign-left valign-middle"><div><div class="ulist"><ul><li><p>Коммитер проекта Apache Ignite</p></li><li><p><a href="mailto:ivandasch@apache.org">ivandasch@apache.org</a></p></li><li><p><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/ivandasch">ivandasch</a></p></li><li><p><span class="icon"><i class="fa fa-telegram"></i></span> <a href="https://t.me/ivandasch">ivandasch</a></p></li></ul></div></div></td></tr></table></div></section>
 <section id="_что_нового_в_новой_версии"><h2>Что нового в новой версии</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Выросла производительность в реальных сценариях</p></li><li class="fragment"><p>Поддержка Partition Awareness</p></li><li class="fragment"><p>Asyncio версия</p></li><li class="fragment"><p>Поддержка cluster api (пока только активация-деактивация)</p></li></ul></div></div></section>
+<section><section id="_примеры"><h2>Примеры</h2></section><section id="_пример"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">class Student(
+    metaclass=GenericObjectMeta,
+    type_name='SQL_PUBLIC_STUDENT_TYPE',
+    schema={
+        'name': String,
+        'login': String,
+        'age': IntObject,
+        'gpa': DoubleObject,
+    }
+):
+    pass</code></pre></div></div></div></section><section id="_пример_2"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">SQL_CONFIG = {
+    PROP_NAME: 'SQL_PUBLIC_STUDENT',
+    PROP_SQL_SCHEMA: 'PUBLIC',
+    PROP_QUERY_ENTITIES: [
+    ...]
+}
+
+client = Client(partition_aware=True)
+with client.connect([('127.0.0.1', 10800 + i) for i in range(3)]):
+    # client.get_cluster().set_state(ClusterState.ACTIVE)
+    student_cache = client.get_or_create_cache(SQL_CONFIG)
+    student_cache.put_all({i: Student(login='jdoe', name='John Doe', age=17, gpa=4.25) for i in range(10)})
+    print(student_cache.get(1))
+    print(student_cache.get_all([1, 2, 3]))
+
+    with client.sql(r'SELECT * FROM Student', include_field_names=True) as cursor:
+        for row in cursor:
+            print(row)
+
+    with student_cache.scan() as cursor:
+        for row in cursor:
+            print(row)</code></pre></div></div></div></section></section>
 <section id="_немного_о_тестовом_стенде"><h2>Немного о тестовом стенде</h2><div class="slide-content"><div class="ulist"><ul><li><p><code>16 x Intel&#174; Xeon&#174; Gold 6248R CPU @ 3.00GHz, 32Gb</code></p></li><li><p><code>Ubuntu 18.04.3 x86_64</code></p></li><li><p><code>OpenJDK 1.8.0u282</code>, <code>Apache Ignite 2.10.0</code>, <code>python 3.8.9</code>, <code>uvloop 0.15.2</code></p><div class="ulist"><ul><li><p>4 узла, без бэкапов</p></li><li><p><code>-Xmx8G -Xms8G -XX:+UseG1GC</code></p></li><li><p>Dataregion&#8201;&#8212;&#8201;18Gb, in-memory</p></li></ul></div></li></ul></div></div></section>
 <section><section id="_оптимизации"><h2>Оптимизации</h2></section><section id="_бенчмарки_put_bytearray"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">bytearray_sizes = [1024, 4096, 10 * 1024, 100 * 1024, 500 * 1024, 1024 * 1024, 10 * 1024 * 1024]
 
@@ -487,36 +519,21 @@ def benchmark_sync_binary_get(benchmark, cache, size):
 <section><section id="_partition_awareness"><h2>Partition awareness</h2></section><section id="_scheme"><div class="slide-content"><div class="imageblock"><img src="images/pa_state.png" alt="pa state"></div></div></section><section id="_example"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">client = Client(partition_aware=True)
 with client.connect([('192.168.0.1', 10800), ...]):
     ...</code></pre></div></div></div></section><section id="_get_bytearray_pa_vs_simple"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_bytearray_pa.png" alt="get bytearray pa" width="50%"></div></div></section><section id="_put_bytearray_pa_vs_simple"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_bytearray_pa.png" alt="put bytearray pa" width="50%"></div></div></section><section id="_get_binary_object_pa_vs_simple"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_binary_object_pa.png" alt="get binary object pa" width="50%"></div></div></section><section id="_put_binary_object_pa_vs_simple"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_binary_object_pa.png" alt="put binary object pa" width="50%"></div></div></section></section>
-<section><section id="_немного_сахарку"><h2>Немного сахарку.</h2></section><section id="_context_managers"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">client = Client()
-try:
-    client.connect('127.0.0.1', 10800)
-    ...
-finally:
-    client.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">client = Client()
-with client.connect('127.0.0.1', 10800):
-    ...</code></pre></div></div></div></section><section id="_cursors"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">cursor = cache.scan()
-try:
-    for k,v in cursor:
-        ...
-finally:
-    cursor.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">with cache.scan() as cursor:
-    for k,v in cursor:
-        ...</code></pre></div></div></div></section><section id="_cursors_2"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">cursor = cache.sql('SELECT * FROM TABLE')
-try:
-    for row in cursor:
-        ...
-finally:
-    cursor.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">with cache.sql('SELECT * FROM TABLE') as cursor:
-    for row in cursor:
-        ...</code></pre></div></div></div></section></section>
-<section><section id="_asyncio"><h2>Asyncio</h2></section><section id="_проблемы_конкурентности_в_python"><h2>Проблемы конкурентности в python</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p><strong>GIL</strong> (sic!)</p></li><li class="fragment"><p>Из-за <strong>GIL</strong> многопоточность бессмысленна</p></li><li class="fragment"><p>Выход?</p></li></ul></div></div></section><section id="_проблемы_конкурентности_в_python_2"><h2>Проблемы конкурентности в python</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Помочь может event-loop</p></li><li class="fragment"><p>Это все еще 1 поток</p></li><li class="fragment"><p>Но IO не блокирующее.</p></li></ul></div></div></section><section id="_проблемы_конкурентности_в_python_asyncio"><h2>Проблемы конкурентности в python, asyncio</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Есть накладные расходы на исполнение и создание сопрограмм.</p></li><li class="fragment"><p>Но если исполнять конкурентно IO, то можно добиться выигрыша.</p></li></ul></div></div></section><section id="_отступление_перед_benchmarks"><h2>Отступление перед benchmarks</h2><div class="slide-content"><div class="ulist"><ul><li><p>Используем <a href="https://uvloop.readthedocs.io">uvloop</a></p><div class="ulist"><ul><li><p>Сильно быстрее встроенного event loop</p></li><li><p>Использование бесшовное</p></li><li><p>Вы скорее всего и так его используете:</p><div class="ulist"><ul><li><p><a href="https://www.uvicorn.org">uvicorn</a></p></li><li><p><a href="https://sanicframework.org/en/guide">sanic framework</a></p></li></ul></div></li></ul></div></li></ul></div></div></section><section id="_example_2"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">import asyncio
-import uvloop
+<section><section id="_asyncio"><h2>Asyncio</h2></section><section id="_проблемы_конкурентности_в_python"><h2>Проблемы конкурентности в python</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p><strong>GIL</strong> (sic!)</p></li><li class="fragment"><p>Из-за <strong>GIL</strong> многопоточность бессмысленна</p></li><li class="fragment"><p>Выход?</p></li></ul></div></div></section><section id="_проблемы_конкурентности_в_python_2"><h2>Проблемы конкурентности в python</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Помочь может event-loop</p></li><li class="fragment"><p>Это все еще 1 поток</p></li><li class="fragment"><p>Но IO не блокирующее.</p></li></ul></div></div></section><section id="_проблемы_конкурентности_в_python_asyncio"><h2>Проблемы конкурентности в python, asyncio</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Есть накладные расходы на исполнение и создание сопрограмм.</p></li><li class="fragment"><p>Но если исполнять конкурентно IO, то можно добиться выигрыша.</p></li></ul></div></div></section><section id="_отступление_перед_benchmarks"><h2>Отступление перед benchmarks</h2><div class="slide-content"><div class="ulist"><ul><li><p>Используем <a href="https://uvloop.readthedocs.io">uvloop</a></p><div class="ulist"><ul><li><p>Сильно быстрее встроенного event loop</p></li><li><p>Использование бесшовное</p></li><li><p>Вы скорее всего и так его используете:</p><div class="ulist"><ul><li><p><a href="https://www.uvicorn.org">uvicorn</a></p></li><li><p><a href="https://sanicframework.org/en/guide">sanic framework</a></p></li></ul></div></li></ul></div></li></ul></div></div></section><section id="_example_2"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">async def main_async():
+    client = AioClient(partition_aware=True)
+    async with client.connect([('127.0.0.1', 10800 + i) for i in range(3)]):
+        student_cache = await client.get_or_create_cache(SQL_CONFIG)
+        await student_cache.put_all({i: Student(login='jdoe', name='John Doe', age=17, gpa=4.25) for i in range(10)})
+        print(await student_cache.get(1))
+        print(await student_cache.get_all([1, 2, 3]))
 
-async def main():
-    ...
+        async with client.sql(r'SELECT * FROM Student ORDER BY SID', include_field_names=True) as cursor:
+            async for row in cursor:
+                print(row)
+
+        async with student_cache.scan() as cursor:
+            async for row in cursor:
+                print(row)
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 loop = asyncio.get_event_loop()
@@ -550,33 +567,8 @@ def benchmark_async_bytearray_put_batched(benchmark, event_loop, aio_cache, size
         await asyncio.gather(*[put() for _ in range(0, batch)])
 
     benchmark.pedantic(execute, args=(event_loop, put_batched), rounds=10, iterations=1000 // batch, warmup_rounds=10)</code></pre></div></div></div></section><section id="_get_bytearray"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_bytearray_aio.png" alt="get bytearray aio" width="50%"></div></div></section><section id="_get_bytearray_large"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_bytearray_aio_large.png" alt="get bytearray aio large" width="50%"></div></div></section><section id="_put_bytearray"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_bytearray_aio.png" alt="put bytearray aio" width="50%"></div></div></section><section id="_put_bytearray_large"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_bytearray_aio_large.png" alt="put bytearray aio large" width="50%"></div></div></section><section id="_get_binary"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_binary_object_aio.png" alt="get binary object aio" width="50%"></div></div></section><section id="_get_binary_large"><div class="slide-content"><div class="imageblock text-center"><img src="images/get_binary_object_aio_large.png" alt="get binary object aio large" width="50%"></div></div></section><section id="_put_binary"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_binary_object_aio.png" alt="put binary object aio" width="50%"></div></div></section><section id="_put_binary_large"><div class="slide-content"><div class="imageblock text-center"><img src="images/put_binary_object_aio_large.png" alt="put binary object aio large" width="50%"></div></div></section><section id="_выводы"><h2>Выводы</h2><div class="slide-content"><div class="ulist"><ul><li><p>Partition Aware в asyncio must!</p></li><li><p>Эффект connection pool</p></li></ul></div></div></section></section>
-<section><section id="_немного_сахарку_со_вкусом_асинхронщины"><h2>Немного сахарку со вкусом асинхронщины</h2></section><section id="_context_managers_2"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">client = AioClient()
-try:
-    await client.connect('127.0.0.1', 10800)
-    ...
-finally:
-    await client.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">client = AioClient()
-async with client.connect('127.0.0.1', 10800):
-    ...</code></pre></div></div></div></section><section id="_cursors_3"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">cursor = await cache.scan()
-try:
-    async for k,v in cursor:
-        ...
-finally:
-    await cursor.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">async with cache.scan() as cursor:
-    async for k,v in cursor:
-        ...</code></pre></div></div></div></section><section id="_cursors_4"><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">cursor = await cache.sql('SELECT * FROM TABLE')
-try:
-    async for row in cursor:
-        ...
-finally:
-    await cursor.close()</code></pre></div></div>
-<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-python hljs" data-noescape="true" data-lang="python">async with cache.sql('SELECT * FROM TABLE') as cursor:
-    async for row in cursor:
-        ...</code></pre></div></div></div></section></section>
-<section id="_планы"><h2>Планы</h2><div class="slide-content"><div class="ulist"><ul><li><p>Expiry policy и transactions</p></li><li><p>Connection pools в asyncio версии.</p></li><li><p>Дальнейшие оптимизации в serialization/deserialization (больше кода на С!)</p></li></ul></div></div></section>
-<section id="_ссылки"><h2>Ссылки</h2><div class="slide-content"><div class="ulist"><ul><li><p><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/apache/ignite-python-thin-client" class="bare">https://github.com/apache/ignite-python-thin-client</a></p></li><li><p><a href="https://apache-ignite-binary-protocol-client.readthedocs.io/en/latest/readme.html">Документация на readthedocs.io</a></p></li><li><p><code>pip install pyignite==0.4.0</code> (soon!)</p></li></ul></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
+<section id="_планы"><h2>Планы</h2><div class="slide-content"><div class="ulist"><ul><li><p>Expiry policy (TTL) (Уже в master)</p></li><li><p>transactions</p></li><li><p>Connection pools в asyncio версии.</p></li><li><p>Дальнейшие оптимизации в serialization/deserialization (больше кода на С!)</p></li></ul></div></div></section>
+<section id="_ссылки"><h2>Ссылки</h2><div class="slide-content"><div class="ulist"><ul><li><p><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/apache/ignite-python-thin-client" class="bare">https://github.com/apache/ignite-python-thin-client</a></p></li><li><p><a href="https://apache-ignite-binary-protocol-client.readthedocs.io/en/stable/readme.html">Документация на readthedocs.io</a></p></li><li><p><code>pip install pyignite==0.4.0</code></p></li></ul></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
   if (!(slide.classList.contains('canvas') || slide.classList.contains('background'))) return;
